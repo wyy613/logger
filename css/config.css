@@ -1,0 +1,93 @@
+/* iconfont */
+@font-face {
+  font-family: 'iconfont';
+  src: url('./font_icon/iconfont.woff2?t=1697682915143') format('woff2'),
+       url('./font_icon/iconfont.woff?t=1697682915143') format('woff'),
+       url('./font_icon/iconfont.ttf?t=1697682915143') format('truetype');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+/* 定义ifreme */
+iframe{
+  align:"center";width:100%; 
+  border:"0";
+}
+
+/* 定义颜色 */
+:root{
+  /* 背景、边框 */
+
+  --webback:#F6F6F6;
+
+  --gray1:#111111;
+  --gray2:#646464;
+  --gray3:#969696;
+  --gray4:#F2F2F2;
+  --gray5:#EFEFEF;
+  --gray6:#F5F5F5;
+  --gray7:#F7F7F7;
+  --gray8:#d8d8d8;
+
+  --white1: #ffffff;
+  --brand0:#5A5EA6;
+  --brand1:#676CC4;
+  --brand75p:#8D91D3;
+  --brand3:#E1E2F3;
+  --brand4:#815585;
+
+  --navback:#031527;
+  --navfontgray:#7F868F;
+  --navfontsun:#9B99F9;
+  --navfontback:#7674C9;
+  --tholder:#AEBBCE;
+  --tborder:#F5F6F9;
+  --tbborder:#E9EDF6;
+  --tdisable:#EBF0F5;
+  --tbacksun:#F9FAFC;
+
+
+  --pathcolor:#707E92;
+
+  --swork:#61AC62;
+  --salarm:#DA4E51;
+  --sstandby:#DA914E;
+
+  /* 文字 */
+  --fnav1:12px;
+  --ftitle:20px;
+  --fcon2:14px;
+  --font3:18px;
+
+}
+/* var(--graybackground1); */
+
+/* scrollbar */
+/*定义滚动条整体样式*/
+::-webkit-scrollbar {  
+  width: 6px;
+  /* height: 6px;  */
+  background-color: var(--gray6);  /*整体背景颜色*/
+  }
+/*定义滚动条内部样式*/
+::-webkit-scrollbar-thumb { 
+background-color: var(--gray8);  /*内部背景颜色*/
+border-radius: 6px; 
+}
+
+body{
+  font-family: pingfang SC,helvetica neue,arial,hiragino sans gb,microsoft yahei ui,microsoft yahei,simsun,sans-serif!important;
+}
+input{
+  border: none;
+  background-color: var(--tbacksun);
+  vertical-align: middle;
+}
+input:focus{
+  outline: none;
+}

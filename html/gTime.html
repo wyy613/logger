@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <style>
+        
+    </style>
+</head>
+<body id="body-wrap">
+    <div class="pcontent"  test1="1s">
+        <div class="g_guide">
+            <zy-step class="" stepnum="1"></zy-step>
+            <div class="gparawrap">
+                <zy-input class="currtime" titlename="设备当前时间" placeholder="设备当前时间" prompt='' inunit="" regex="" disabled="">
+                </zy-input>
+                <zy-input class="ymd"  titlename="日-月-年" placeholder="dd-mm-yyyy" prompt="格式：dd-mm-yyyy" inunit="" regex="^(0?[1-9]|[12]\d|3[01])-(0?[1-9]|1[0-2])-\d{4}$" disabled='enable'>        
+                </zy-input>
+                <zy-input class="hms"  titlename="时:分:秒" placeholder="hh:mm:ss" prompt="格式：hh:mm:ss" inunit="" regex="^(0?[0-9]|1[0-9]|2[0-3]):(0?[0-9]|[1-5][0-9]):(0?[0-9]|[1-5][0-9])$" disabled='enable'>
+                </zy-input>
+            </div>
+
+            <div class="footset">
+                <span class="nextpage">下一步</span>
+                <span class="getTime">刷新</span>
+                <span class="set_butt">设置</span>
+            </div>
+        </div>
+        
+    </div>
+        
+    <script type="module" src="../js/zyElement.js"></script>
+    <script type="module" src="../js/gtime.js"></script>
+</html>

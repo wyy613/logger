@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Device connect</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <link rel="stylesheet" href="../css/pagination.css">
+    <link rel="stylesheet" href="../css/gsearchdevice.css">
+</head>
+<body id="body-wrap">
+    <div class="pcontent">
+        <div class="g_guide">
+            <zy-step class="" stepnum="2"></zy-step>
+            <div class="formfunc">
+                <span class="device_operation_button deletedevice">删除设备</span>
+                <span class="device_operation_button querydevice">搜索设备</span>
+            </div>
+            <div class="gparalist">
+                <div class="device_form_th">
+                    <div class="device_form_thtd firstcol"><span class="device_form_th_paraname selectalls"><i class="iconfont selectallicon">&#xe610;</i>选择</span></div>
+                    <div class="device_form_thtd secondcol"><span class="device_form_th_paraname">Modbus地址</span></div>
+                    <div class="device_form_thtd thirdcol"><span class="device_form_th_paraname">SN</span></div>
+                    <div class="device_form_thtd fourcol"><span class="device_form_th_paraname">设备型号</span></div>
+                    <div class="device_form_thtd fivecol"><span class="device_form_th_paraname">COM Port</span></div>
+                    <div class="device_form_thtd sixcol"><span class="device_form_th_paraname">操作</span></div>
+                    <div class="device_scrollw"></div>
+                </div>
+                <div class="device_table_control">           
+                </div>
+                <div class="device_form_foot">
+                    <span class="device_operation_button listTotalNum">共 -- 条</span>
+                    <div class="device_list_page"></div>
+                    <span class="device_operation_button device_pagenum">10条/页</span>
+                    
+                </div>
+            </div>
+            <div class="footset">
+                <span class="nextpage">下一步</span>
+                <span class="refresh">刷新</span>
+            </div>
+        </div>
+    </div>
+    <!-- delete window -->
+    <!-- <div class="deletebackground">
+        <div class="delete_wrap">
+            <div class="delete_title">删除</div>
+            <div class="delete_form">
+                <span class="delete_text">确认删除：</span><span class="delete_sn"></span><span class="delete_text">?</span>
+            </div>
+            <div class="delete_butt">
+                <span class="delete_bu_close">关闭</span>
+                <span class="delete_bu_submit">确定</span>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="editbackground">
+        <div class="edit_wrap">
+            <div class="edit_title">编辑</div>
+            <div class="edit_form">
+                <div class="para">
+                    <span class="paraname parasn">SN</span>
+                    <span class="paravalue psnvalue">210342785300302</span>
+                </div>
+                <div class="para">
+                    <span class="paraname paracomport">COM口</span>
+                    <zy-edit-dropdown class="edit_comport paravalue" placeholder="请选择">
+                        <option value="COM1">COM1</option>
+                        <option value="COM2">COM2</option>
+                        <option value="COM3">COM3</option>
+                        <option value="COM4">COM4</option>
+                    </zy-edit-dropdown>
+                </div>
+                <div class="para">
+                    <span class="paraname paramodbus">Modbus地址</span>
+                    <zy-edit-input class="paravalue" placeholder="" inunit="" regex="" disabled='enable'></zy-edit-input>
+                </div>
+            </div>
+            <div class="edit_butt">
+                <span class="edit_bu_close">关闭</span>
+                <span class="edit_bu_submit">确定</span>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="mask">
+        <div class="popForm">
+            <div class="pophead">
+                <span class="poptitle">搜索设备</span>
+                <span class="popclose iconfont">&#xe64f;</span>
+            </div>
+            <div class="popcontent">
+                <zy-progressbar class="progressbar" curr='1' total='9' percent="11"></zy-progressbar>
+                <div class="popliwrap">
+                    <div class="device_form_th">
+                        <div class="device_form_thtd sfirsttd"><span class="device_form_th_paraname">选择</span></div>
+                        <div class="device_form_thtd ssecondcol"><span class="device_form_th_paraname">Modbus地址</span></div>
+                        <div class="device_form_thtd sthirdcol"><span class="device_form_th_paraname">SN</span></div>
+                        <div class="device_form_thtd sfourcol"><span class="device_form_th_paraname">设备型号</span></div>
+                        <div class="device_form_thtd sfivecol"><span class="device_form_th_paraname">COM Port</span></div>
+                        <div class="device_scrollw"></div>
+                    </div>
+                    <div class="device_table_control">
+                        <div class="device_nodata">暂无数据</div> 
+                    </div>
+                </div>
+            </div>
+            <div class="popfoot">
+                <span class="startButt">开始搜索</span>
+                <span class="ototal">共 -- 条</span>
+                <span class="oaddassi">一键分配地址</span>
+                <span class="oadd">添加</span>
+            </div>
+        </div>
+    </div> -->
+    <script type="module" src="../js/zyElement.js"></script>
+    
+    <script type="module" src="../js/gDeviceConn.js"></script>
+</body>
+</html>

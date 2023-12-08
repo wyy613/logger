@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Logger parameter</title>
+    <link rel="stylesheet" href="../css/font_icon/iconfont.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body id="body-wrap">
+    
+    <div class="pcontent">
+        <div class="g_guide">
+            <zy-step class="" stepnum="0"></zy-step>
+            <div class="gparawrap">
+                <zy-input class="invOnline" titlename="逆变器在线台数" placeholder="[1, 120]" prompt='范围：[1, 120]' 
+                inunit="" regex="^(0{0,2}[1-9]\d?|1[01]\d|120)$" disabled="enable"></zy-input>
+                <zy-dropdown class="usbFlash" placeholder="请选择" titlename="USB工作模式">
+                    <option value="U盘模式">U盘模式</option>
+                    <option value="调试模式">调试模式</option>
+                </zy-dropdown>
+                <zy-dropdown class="com4mode" placeholder="请选择" titlename="COM4功能选择">
+                    <option value="接入电表">接入电表</option>
+                    <option value="接入逆变器">接入逆变器</option>
+                </zy-dropdown>
+                <zy-dropdown class="enable485" placeholder="请选择" titlename="是否接入485匹配电阻">
+                    <option value="否">否</option>
+                    <option value="是">是</option>
+                </zy-dropdown>
+                <zy-dropdown class="enable12V1Apowersupply" placeholder="请选择" titlename="是否接入12V1A可供电源">
+                    <option value="否">否</option>
+                    <option value="是">是</option>
+                </zy-dropdown>
+            </div>
+            <div class="footset">
+                <span class="nextpage">下一步</span>
+                <span class="refresh">刷新</span>
+                <span class="set_butt">设置</span>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="../js/gLoggerpara.js"></script>
+    <script type="module" src="../js/zyElement.js"></script>
+</body>
+</html>

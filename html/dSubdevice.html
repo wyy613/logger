@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <title>Solinteg Logger Device List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../css/deviceList.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<div class="layout_page">
+    <!-- <div class="page_title"></div> -->
+    <div class="device_operation">      
+        <span class="device_operation_button listUpgradeTime">更新时间--</span>
+        <span class="device_operation_button manualadd">手动添加</span>
+        <span class="device_operation_button querydevice">查询设备</span>
+    </div>   
+    <div class="device_form_outline">
+        <div class="device_form_th">
+            <div class="device_form_thtd device_firstcol"><span class="device_form_th_paraname">状态</span> </div>
+            <div class="device_form_thtd device_secondcol"><span class="device_form_th_paraname">接口-地址</span> </div>
+            <div class="device_form_thtd device_thirdcol"><span class="device_form_th_paraname">SN</span> </div>
+            <div class="device_form_thtd device_fourcol"><span class="device_form_th_paraname">设备型号</span> </div>
+            <div class="device_form_thtd device_fivecol"><span class="device_form_th_paraname">设备类型</span> </div>
+            <div class="device_form_thtd device_sixcol"><span class="device_form_th_paraname">固件版本</span> </div>
+            <div class="device_form_thtd device_sevencol"><span class="device_form_th_paraname">有功功率</span> </div>
+            <div class="device_form_thtd device_eightcol"><span class="device_form_th_paraname">日发电量</span> </div>
+            <div class="device_form_thtd device_ninecol"><span class="device_form_th_paraname">操作</span> </div>
+            <div class="device_scrollw"></div>
+        </div>
+        <div class="device_table_control">           
+        </div>
+        <div class="device_form_foot">
+            <span class="device_operation_button listTotalNum">共 -- 条</span>
+            
+            <div class="device_list_page"></div>
+            <span class="device_operation_button device_pagenum">15条/页</span>
+        </div>
+        
+            
+        </div>
+    </div>
+</div>
+    <script  src="../js/devicelist.js" type="module"></script>
+    <script  src="../js/pagination.js" type="module"></script>
+</body>
+</html>

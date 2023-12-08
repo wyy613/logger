@@ -1,0 +1,81 @@
+a {
+    text-decoration: none;
+}
+
+.device_list_page {
+
+    display: flex;flex-direction: row;
+    align-items: center;
+}
+
+.device_list_page a {
+    cursor: default;
+    display: inline-block;
+    color: #111111;
+    background-color: var(--white1);
+    height: 25px;
+    font-size: 10pt;
+    line-height: 25px;
+    padding: 0 9px;
+    margin: 0 2px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.device_list_page a:not(.disabled):not(.current):hover {
+    background-color: var(--gray6);
+    cursor: pointer;
+}
+
+.device_list_page a.current {
+    display: inline-block;
+    font-size: 10pt;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 9px;
+    margin: 0 2px;
+    color: #111111;
+    background-color: var(--brand3);
+    border: 1px solid var(--brand3);
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.device_list_page a.disabled {
+    display: inline-block;
+    font-size: 10pt;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 9px;
+    margin: 0 2px;
+    color: #111111;
+    background: var(--white1);
+    border: 1px solid var(--white1);
+    border-radius: 4px;
+    vertical-align: middle;
+    cursor: no-drop;
+}
+.device_list_page a i{
+    font-size: 12px;
+}
+
+/* 定义颜色 */
+:root{
+    /* 灰色边框 */
+    --grayborder:#e9e9e9;
+    --graybackground1:#f8f8f8
+}
+
+
+
+/* pagenum */
+.device_pagenum{
+    border: 1px solid var(--gray5);
+    /* background-color: var(--gray7); */
+}
+
+/* select icon */
+.deli_select{
+    cursor: pointer;
+}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Reset password</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/guide.css">
+</head>
+<body id="body-wrap">
+    <div class="pcontent">
+        <div class="g_guide">
+            <zy-step class="" stepnum="5"></zy-step>
+            <div class="gparawrap">
+                <zy-input class="currpass" titlename="当前密码" placeholder="" prompt='' inunit="" regex="^[a-zA-Z0-9!@#$%^&*()_+]{6,8}$" disabled="enable">
+                </zy-input>
+                <zy-input class="newpass" titlename="新密码" placeholder="" prompt='支持: 6-8位数字或大小写字母' inunit="" regex="^[a-zA-Z0-9!@#$%^&*()_+]{6,8}$" disabled="enable">
+                </zy-input>
+            </div>
+            <div class="footset">
+                <span class="prepage">上一步</span>
+                <span class="set_butt">设置</span>
+            </div>
+        </div>
+        
+    </div>
+    <script type="module" src="../js/zyElement.js"></script>
+    <script type="module" src="../js/gresetpassword.js"></script>
+</body>
+</html>

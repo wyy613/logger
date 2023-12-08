@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide - Meter set</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/guide.css">
+</head>
+<body id="body-wrap">
+    <div class="pcontent">
+        <div class="g_guide">
+            <zy-step class="" stepnum="3"></zy-step>
+            <div class="gparawrap">
+                <!-- <div class="nometerport">
+                    <span class="notemeter">
+                        若要进行电表配置，请先转到<span class="goinvset">采集器参数</span>页面，将“COM4功能选择”设为“接入电表”
+                    </span>
+                </div> -->
+                <!-- <zy-input class="comport" titlename="COM口" placeholder="COM4" prompt='电表及其他第三方设备只能接在COM4下' inunit="" regex="" disabled="">
+                </zy-input>
+                <zy-dropdown class="baud_rate" placeholder="请选择" titlename="波特率">
+                    <option value="9600">9600</option>
+                    <option value="15200">115200</option>
+                </zy-dropdown>
+                <zy-dropdown class="metertype" placeholder="请选择一个选项" titlename="电表类型">
+                    <option value="RMM">RMM</option>
+                    <option value="DTSD1352" >DTSD1352</option>
+                    <option value="AC10H">AC10H</option>
+                </zy-dropdown>
+                <zy-dropdown class="protocoltype" placeholder="请选择协议类型" titlename="协议类型">
+                    <option value="Modbus">Modbus-TCP</option>
+                    <option value="RTU">RTU</option>
+                </zy-dropdown>
+                <zy-input class="modbusaddr" titlename="地址" placeholder="[1, 247]" prompt='范围：[1, 247]' inunit="" regex="^(0*[1-9]\d?|[1-9][0-9]{1,2}|1\d{2}|2[0-3]\d|24[0-7])$" disabled="enable">
+                </zy-input>
+                <zy-input class="volRatio"  titlename="电压变比" placeholder="[0, 6000]" prompt="范围：[0, 6000]" inunit=": 1" regex="^(?!0)\d{1,4}$|^[1-5]\d{4}$|^6000$" disabled='enable'>          
+                </zy-input>
+                <zy-input class="currRatio"  titlename="CT变比" placeholder="[0, 6000]" prompt="范围：[0, 6000]" inunit=": 1" regex="^(?!0)\d{1,4}$|^[1-5]\d{4}$|^6000$" disabled='enable'>
+                </zy-input> -->
+            </div>
+            <div class="footset">
+                <span class="nextpage">下一步</span>
+                <span class="refresh">刷新</span>
+                <span class="set_butt">设置</span>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../js/zyElement.js"></script>
+    <script type="module" src="../js/gmeter.js"></script>
+</body>
+</html>
