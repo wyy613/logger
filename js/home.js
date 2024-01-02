@@ -6,6 +6,8 @@ const nav1icon=["&#xe650;","&#xe665;","&#xe773;","&#xe660;","&#xe636;","&#xe946;
 var currul=0,currli=0
 // iframe
 var riframe
+const exitbutt=document.querySelector('.exit')
+
 // 页面初始化函数
 getPageName(currli)
 
@@ -245,23 +247,23 @@ function getPageName(i){
 function loadingmask(){
     // 当页面加载完毕后，显示内容并隐藏遮罩层
     // 创建遮罩层元素
-    var overlay = document.createElement('div');
-    overlay.classList.add('loading_mask');
+    var overlay = document.createElement('div')
+    overlay.classList.add('loading_mask')
     overlay.innerHTML=`<div class="loader"></div>`
-    document.querySelector('.right_content').appendChild(overlay);
+    document.querySelector('.right_content').appendChild(overlay)
     riframe.addEventListener('load', function() {
         // 移除遮罩层以及其内部的 loader 元素
-        var mask = document.querySelector('.loading_mask');
+        var mask = document.querySelector('.loading_mask')
         if (mask) {
-            mask.parentNode.removeChild(mask); // 移除遮罩层及其内部元素
+            mask.parentNode.removeChild(mask) // 移除遮罩层及其内部元素
         }
     }) 
 }
 
 // 当页面加载完毕后，显示内容并隐藏遮罩层
 // 创建遮罩层元素
-var overlay = document.createElement('div');
-overlay.classList.add('loading_mask');
+var overlay = document.createElement('div')
+overlay.classList.add('loading_mask')
 overlay.innerHTML=`<div class="loader"></div>`
 document.querySelector('.right_content').appendChild(overlay);
 riframe.addEventListener('load', function() {
@@ -271,3 +273,107 @@ riframe.addEventListener('load', function() {
         mask.parentNode.removeChild(mask); // 移除遮罩层及其内部元素
     }
 }) 
+
+// 禁止回退
+history.pushState(null, null, location.href)
+window.onpopstate = function () {
+    history.go(1);
+};
+
+// 1.0
+// (function noback() {
+//     history.pushState(null, null, document.URL);
+//     window.addEventListener('popstate', function() {
+//          history.pushState(null, null, document.URL)
+//     })
+// })()
+
+exitbutt.addEventListener('click',function(){
+
+})
+
+// 删除设备窗体
+function Formexitweb(){
+    var w=document.createElement('div')
+    w.innerHTML=`<style>/*exit web page */
+    .deletebackground{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background: rgba(0,0,0,.1);
+        z-index: 9;
+    }
+    .delete_wrap{
+        position:absolute;top:15%;left:calc((100% - 450px)/2);padding:18px 25px;
+        background-color: #fff;
+        font-weight: 400;
+        display: flex;flex-direction: column;
+    }
+    .delete_title{
+        font-size: 16px;
+        color: #111;
+        margin-bottom: 13px;
+    }
+    .delete_form{
+        width: 420px;
+        height:auto;
+        display:flex;
+        flex-direction:row;
+    }
+    .delete_form span{
+        font-size: 14px;
+        font-weight: 400;
+        height: 40px;
+        line-height:40px;
+    }
+    .delete_text{
+        color: rgba(0,0,0,0.6);
+    }
+    .delete_sn{
+        color: rgba(0,0,0,0.6);
+    }
+    .delete_butt{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+    }
+    .delete_butt span{
+        font-size: 14px;
+        font-weight: 360;
+        height: 26px;
+        line-height: 26px;
+        cursor: pointer;
+    }
+    .delete_butt .delete_bu_close{
+        margin-right: 28px;
+        color:#5A5EA6;
+    }
+    .delete_butt .delete_bu_submit{
+        color: #5A5EA6;
+    }
+    </style>
+    <div class="exitbackground">
+        <div class="exit_wrap">
+            <div class="exit_title">删除</div>
+            <div class="exit_form">
+                <span class="exit_text">确认删除：</span><span class="exit_text">?</span>
+            </div>
+            <div class="exit_butt">
+                <span class="exit_bu_close">关闭</span>
+                <span class="exit_bu_submit">确定</span>
+            </div>
+        </div>
+    </div>
+    `
+    w.setAttribute('class','editbackground')
+    this.setForm = function(){
+        e.appendChild(w)
+    }   
+    this.getEl = function(){
+        return w
+    }
+}

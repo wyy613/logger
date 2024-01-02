@@ -1,0 +1,189 @@
+.pcontent{
+    display: flex;flex-direction: column;
+    box-sizing: border-box;padding: 15px 20px;
+    width: 100%;height: 100%;
+}
+.basicinfo,.realtimeinfo{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    border-radius: 3px;
+}
+.basicinfo{
+    height: 40px;
+    flex-direction: row;
+}
+.realtimeinfo{
+    height: calc(100% - 50px);
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.para{
+    padding: 0px 10px;
+    height: 40px;line-height: 40px;
+    margin-right: 36px;
+}
+.para_title,.para_value{
+    font-size: 12px;
+    font-weight: 400;
+}
+.para_title{
+    color: #707e92;
+}
+.para_value{
+    color: #111;
+    margin-left: 3px;
+}
+.concise{
+    display: flex;flex-direction: row;justify-content: center;
+    margin-top: 16px;
+    height: 90px;
+    width: 100%;
+}
+.today_gen,.total_gen{
+    /* flex: 1; */
+    height: 90px;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(234,238,241,.5);
+    box-sizing: border-box;
+    padding: 10px 30px;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #f9fafc;
+    width: 30%;
+}
+.today_gen_leftimg{
+    width: 40px;height: 40px;
+    margin-right: 12px;
+}
+.today_gen_leftimg span{
+    font-size: 36px;
+    color: #676CC4;
+}
+.today_gen_leftcon{
+    
+}
+.gen_name{
+    font-size: 12px;
+    font-weight: 400;
+    color: #676cc4;
+    margin-right: 8px;
+}
+.gen_value{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23px;
+    color: #111;
+}
+.diagram{
+    width: 100%;
+    position: relative;
+    height: calc(100% - 106px);
+    box-sizing: border-box;
+}
+.diagraminner{
+    position: relative;
+    margin: 125px auto 129px;
+    width: 572px;
+    height: 320px;
+}
+.topology_item{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+.topology_pv{
+    left: 226px;
+    top: 0;
+    z-index: 3;
+}
+.topology_load{
+    bottom: 0;
+    left: 0;
+}
+.topology_batt{
+    bottom: 0;
+    left: 226px;
+}
+.topology_grid{
+    bottom: 0;
+    right: 0;
+}
+.topology_icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: var(--appfff, #FFF);
+    stroke-width: 1.752px;
+    border: 2px solid #EFEFEF;
+    border-radius: 100%;
+    stroke: #EFEFEF;
+    box-shadow: 0px 0px 14.5px 0px rgba(29, 104, 173, 0.1) inset;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.topology_img{
+    display: block;
+    font-size: 48px !important;
+    background-image: linear-gradient(0deg, #D2625F 20%,#674DA1 100%); /* 定义渐变背景 */
+    -webkit-background-clip: text; /* 对于WebKit浏览器 */
+    background-clip: text;
+    color: transparent;
+}
+.topology_pv::before{
+    content: "";
+    position: absolute;
+    height: 78px;
+    width: 2px;
+    bottom: -81px;
+    left: 48%;
+    background-color: #efefef;
+    pointer-events: none;
+}
+.topology_pv::after{
+    content: "";
+    position: absolute;
+    height: 78px;
+    width: 2px;
+    bottom: -81px;
+    left: 52%;
+    background-color: #efefef;
+    pointer-events: none;
+}
+.topology_batt::before,.topology_grid::before{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 105px;
+    left: -104px;
+    top: 48%;
+    background-color: #efefef;
+    pointer-events: none;
+}
+.topology_batt::after,.topology_grid::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 105px;
+    left: -104px;
+    top: 52%;
+    background-color: #efefef;
+    pointer-events: none;
+}
+/* 测试文字颜色渐变 */
+.gradient-text {
+    background-image: linear-gradient(0deg, #D2625F 20%,#674DA1 100%); /* 定义渐变背景 */
+    -webkit-background-clip: text; /* 对于WebKit浏览器 */
+    background-clip: text;
+    color: transparent; /* 使文字颜色透明 */
+    font-size: 80px;
+}

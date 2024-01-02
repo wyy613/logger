@@ -54,11 +54,30 @@ a {
     font-size: 12px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 0 16px;
     box-sizing: border-box;
 }
+.right_content_header .header{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.headerLeft{
+    width: 60%;
+}
+.headerRight{
+    width: 40%;
+    justify-content: end;
+}
 .right_content_header span{
     vertical-align: middle;
+}
+.headerRight .exit{
+    cursor: pointer;
+}
+.headerRight .exit:hover{
+    color: #38617c;
 }
 .cnav1{
     display: flex;

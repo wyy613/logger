@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        // 检查用户的登录状态
+        function isUserLoggedIn() {
+            // 从 sessionStorage 中检查登录状态
+            const isLoggedIn = sessionStorage.getItem('isLoggedIn')
+            // 如果已登录，返回 true；否则，返回 false
+            console.log("is it logged in? " + isLoggedIn)
+            return isLoggedIn === 'true';
+        }
+        // document.addEventListener('DOMContentLoaded', function() {
+            // 检查用户是否已登录
+            // if (!isUserLoggedIn()) {
+            //     // 如果用户未登录，重定向到 login.html 页面
+            //     window.location.href = 'login.html'
+            // } else {
+            //     // 用户已登录，可以根据需要获取用户信息
+            //     const lang = sessionStorage.getItem('language')
+            //     console.log("current language is " + lang)
+            // }
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
-<body class="hbody ">
+<body class="hbody">
     <div class="indexContent">
         <div class="indexContent_sider">
             <div class="logo">
@@ -140,10 +160,16 @@
         </div>
         <div class="right_content">
             <div class="right_content_header">
-                <span class="cnavicon iconfont"></span>
-                <span class="cnav1"></span>
-                <span class="csp iconfont"></span>
-                <span class="cnav2"></span>
+                <div class="headerLeft header">
+                    <span class="cnavicon iconfont"></span>
+                    <span class="cnav1"></span>
+                    <span class="csp iconfont"></span>
+                    <span class="cnav2"></span>
+                </div>
+                <div class="headerRight header">
+                    <span class="exit iconfont">&#xe60d;</span>
+                </div>
+                
             </div>
             <!-- 加载遮罩层 -->
             <!-- <div class="loading_mask"><div class="loader"></div></div> -->

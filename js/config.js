@@ -1,6 +1,6 @@
-import {showLoading,hideLoading,showMessage,getPrompt} from './common.js'
+import {showLoading,hideLoading,showMessage,getPrompt,getResultPrompt} from './common.js'
 export var Ajax={
-    get:function(e,d,key){
+    get:function(e,d,lang,key){
         var f;
         if(window.XMLHttpRequest){
             f=new XMLHttpRequest()
@@ -16,20 +16,23 @@ export var Ajax={
         }
         f.timeout = 5000
         f.ontimeout = function(){
-            console.log('请求超时')
+            console.log('Request timeout')
         }
         f.onreadystatechange=function(){
             if(f.readyState==4){
                 if(f.status==200||f.status==304){
                     d.call(this,f.responseText)
                 }else{
-                    showMessage(getPrompt("requestFailed"),2000,'failedContent','&#xed1b;')
+                    getResultPrompt("result-Failed",lang)
+                    .then(translateMessage => {
+                        showMessage(translateMessage,2000,'failedContent','&#xed1b;')
+                    })
                 }
             }
         };
         f.send(key)
     },
-    post:function(e,g,h,key,isAsync=true){
+    post:function(e,g,h,lang,key,isAsync=true){
         var f
         if(window.XMLHttpRequest){
             f=new XMLHttpRequest()
@@ -50,7 +53,10 @@ export var Ajax={
                     h.call(this,f.responseText)
                 }else{
                     // hideLoading("msg-load");
-                    showMessage(getPrompt("setFailed"),2000,'failedContent','&#xed1b;')
+                    getResultPrompt("result-Failed",lang)
+                    .then(translateMessage => {
+                        showMessage(translateMessage,2000,'failedContent','&#xed1b;')
+                    })
                 }
             }
         };

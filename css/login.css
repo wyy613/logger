@@ -2,17 +2,28 @@
 html{
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
-    font-family: sans-serif;
+    font-family: '-apple-system,BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
 }
 body{
     font-size: 14rem;
 }
-#login_back_img1{
+input{
+    border: none;
+    background-color: #F9FAFC;
+    vertical-align: middle;
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    color: #AEBBCE;
+}
+#login-back-img1{
     width: 100%;
     height: 100%;
     min-width: 1200px;
 }
-.login_back_img{
+.login-back-img{
     position: absolute;
     left: 0;
     top: 0;
@@ -23,91 +34,189 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
 }
-
-.login_main{
+.login-main{
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    width: 922px;
+    width: 1020px;
     height: 520px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:space-between;
     align-items:center;
     flex-wrap: wrap;
 }
-.login_slogan{
-    width: 508px;
-    height: 470px;
-    /* background-size: 324px auto;    */
-}
-.login_webname{
-    height: 470px;
-    font-size: 30px;
-    color: #555ab5;
-    opacity: 0.7;
+.login-pickture{
+    width: 50%;
+    height: 100%;
     display: flex;
-    margin: auto;
-    align-items:center;
-    letter-spacing: 5px;
+    flex-direction: column;
+    justify-content: center;
 }
-
-.login_form{
-    width: 414px;
-    height: 470px;
+.login-logo{
+    width: 300px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    height: auto;
+    margin-bottom: 30px;
+}
+.login-slogan{
+    width: 300px;
+    height: auto;
+    margin-bottom: 50px;
+}
+.login-form,.check-form{
+    width: 40%;
+    height: 100%;
     border-radius: 8px;
     background-color: #fff;
     box-sizing: border-box;
     padding: 49px 28px;
 }
-.login_form_header{
+.login-form-header,.check-form-header{
     width: 100%;
     text-align: center;
     font-size: 24px;
+    font-weight: 500;
     color: #676cc4;
-    letter-spacing: 10px;
+    letter-spacing: 1px;
     margin-bottom: 36px;
 }
-.define_form_item,.define_form_selector{
-    height: 40px;
-    width: 100%;
-    border-radius: 2px;
-}
-.define_form_selector{
-    background-color: #f5f6f9;
+
+.login-form-content,.check-form-content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
 }
-/* .define_form_selector_search .define_form_selector_input{
-    position: absolute;
-    width: 320px;
-    height: 40px;
-} */
-.define_form_selector_input{
-    /* position: absolute; */
-    outline: none;
-    border: none;
-    background-color: transparent;
-    margin-left: 10px;
-    width: 310px;
-    height: 40px;
+
+.para-name{
+    font-family: 'Calibri';
+    font-size: 14px !important;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.8);
+    /* letter-spacing: .03rem; */
 }
-.define_form_selector_iconwrap{
-    position: relative;
-    width: 12px;height: 40px;
-    margin-right: 10px;
-    /* margin: auto;right: 10px;top: 0;bottom: 0; */
+.language{
+    margin-bottom: 23px;
 }
-.define_form_selector_icon{
-    display: block;
-    position: absolute;
-    width: 12px;height: 12px;
-    background-image: url(../img/bold.png);
-    background-repeat: no-repeat;
-    margin: auto;right: 0;top: 0;bottom: 0;left: 0;
+.pass{
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 42px;
+    height: 42px;
+    padding-left:9px;
+    font-size:14px;
+    color:rgba(0, 0, 0, 0.8);
+    letter-spacing: .03rem;
+    border: 1px solid #F5F6F9;
+    border-radius: 3px;
+    margin: 9px 0px;
+}
+
+.foot{
+    width: 100%;
+    height: calc(100% - 204px);
+    display: flex;flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0px 20px 0px;
+    box-sizing: border-box;
+}
+.checkfoot{
+    width: 100%;
+    height: calc(100% - 204px);
+    display: flex;flex-direction: column;
+    justify-content:flex-end;
+    padding: 10px 0px 20px 0px;
+    box-sizing: border-box;
+}
+.resetpass{
+    font-size: 12px;
+    color:#7F868F;
+    text-align: right;
+    margin-right: 0px;
+    cursor: pointer;
+}
+.login-form-submit,.check-form-submit{
+    line-height: 46px;
+    height: 46px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #AEBBCE;
+    cursor: not-allowed;
+}
+.passprompt{
+    font-size: 10px;
+    color: #AEBBCE;
+}
+.inputbox{
+    display: flex;flex-direction: row;justify-content: space-between;
+    width: 100%;height: auto;
+    padding: 40px 0 10px 0;
+}
+.checknumber{
+    box-sizing: border-box;padding: 3px 4px;
+    border: 1px solid #AEBBCE;border-radius: 4px;
+    width: 38px;height: 43px;
+    text-align: center;font-size: 18px;
+}
+.wrongprompt{
+    font-size: 14px;
+    color: #828282;
+    text-align: center;
+    font-weight: 350;
 }
 
 
+/* 执行结果 */
+/*submit result*/
+.result,.description{
+    vertical-align: middle;
+}
+.succContent{
+    background-color: #F0F7F0;
+}
+.succContent .result,.succContent .description{
+    color: #61AC62;
+}
+.failedContent{
+    background-color: #FCEEEE;
+}
+.failedContent .result,.failedContent .description{
+    color: #DA4E51;
+}
+.succWhitebak{
+    background-color: rgb(255, 255, 255);
+    height: 20px;line-height: 20px;
+}
+.succWhitebak .result{
+    color: #61AC62;
+    margin-right: 6px;
+}
+.succWhitebak .actionevent{
+    float: right;
+    border-bottom: 1.5px solid #5A5EA6;
+    cursor: pointer;
+    font-weight: 350;
+    color: #5A5EA6;
+}
+.succWhitebak .actionevent:hover{
+    color:#8D91D3;
+    color: #8D91D3;
+}
+/* 弹窗提示 */
+.msg{position:fixed;height:100%;width:100%;left:0;top:0;background:rgba(0,0,0,.1);z-index:10}
+.msg.hide{display:none}
+.msg .content{position:absolute;top:10%;left:50%;padding:12px 18px;
+    /* background: #fff; */
+    color:#111;width:80%;max-width:260px;font-size:14px;
+    border-radius:3px;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%)
+}

@@ -6,6 +6,48 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "38640102",
+      "name": "资源 14",
+      "font_class": "a-ziyuan14",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "38640103",
+      "name": "资源 15",
+      "font_class": "a-ziyuan15",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "38640104",
+      "name": "资源 17",
+      "font_class": "a-ziyuan17",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "13956640",
+      "name": "电网公司",
+      "font_class": "dianwanggongsi",
+      "unicode": "e6ab",
+      "unicode_decimal": 59051
+    },
+    {
+      "icon_id": "38628246",
+      "name": "资源 2",
+      "font_class": "a-ziyuan2",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "38628409",
+      "name": "资源 4",
+      "font_class": "a-ziyuan4",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
       "icon_id": "15550628",
       "name": "disable",
       "font_class": "disable",

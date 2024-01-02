@@ -449,7 +449,7 @@ customElements.define("zy-progressbar",zyProgressBar)
 
 
 // </zy-edit-dropdown> 
-class zyEditDropDown extends HTMLElement{
+export class zyEditDropDown extends HTMLElement{
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
@@ -660,3 +660,134 @@ export class zyEditInput extends HTMLElement{
 }
 customElements.define("zy-edit-input",zyEditInput)
 // zyEditInput
+
+
+
+// </zy-edit-dropdown> 
+export class zyloginDropDown extends HTMLElement{
+    constructor() {
+        super()
+        this.attachShadow({ mode: 'open' })
+      }
+    connectedCallback() {
+        const placeholder = this.getAttribute('placeholder');
+        var options = Array.from(this.getElementsByTagName('option'));
+        // <div class="placeholder">${placeholder}</div>
+        this.shadowRoot.innerHTML = `
+        <link rel="stylesheet" href="../css/index.css">
+        <style>/* dropdown */
+        body{
+            font-family: 'Calibri','-apple-system,BlinkMacSystemFont','Segoe UI','Roboto','Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+        }
+        input{
+            border: none;
+            background-color: #F9FAFC;
+            vertical-align: middle;
+        }
+        input:focus{
+            outline: none;
+        }
+        .input_ol::placeholder{
+            color: #AEBBCE;
+        }
+        .dropdown {
+            display: flex;
+            flex-direction: column;
+            background-color: #F9FAFC;
+            border: 1px solid #F5F6F9;
+            width: 100%;height: 38px;
+            border-radius: 3px;
+            line-height: 38px;
+            margin: 9px 0;
+        }
+        .selectinput{
+            display: flex;flex-direction: row;justify-content: space-between;
+            height: 38px;line-height:38px;
+        }
+        .options{
+            margin-top: 6px;
+            display: none;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 2px 11px 0px rgba(23, 23, 23, 0.2);
+            z-index: 1;
+            border-radius: 3px;
+        }
+        .option {
+            padding: 3px 12px;
+            display: block;
+            cursor: pointer;
+            font-size: 14px;
+            height: 38px;
+            line-height: 38px;
+            color:rgba(0, 0, 0, 0.8);
+            font-weight: 350;
+            letter-spacing: .03rem;
+        }
+        .option:hover {
+            background-color: #F7F7F7;
+        }
+        .selecticon{
+            width:10%;
+            color: #AEBBCE;
+            font-size:12px;
+            text-align:center;
+        }
+        .input_ol,titlename{
+            padding-left:9px;
+            font-size:14px;
+            font-weight: 350;
+            width: 90%;
+            color:rgba(0, 0, 0, 0.8);
+            cursor:pointer;
+            letter-spacing: .03rem;
+        }
+        /* dropdown */</style>
+        <div class="dropdown">
+            <div class="selectinput">
+                <input class="input_ol disabled_input" placeholder="${placeholder}" readonly>
+                <span class="iconfont selecticon">&#xeb6e;</span>
+            </div>
+            <div class="options">
+            ${options.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')}
+            </div> 
+        </div>`
+        const pholderElement = this.shadowRoot.querySelector('.selectinput')
+        const optionsElement = this.shadowRoot.querySelector('.options')
+        const inputol = this.shadowRoot.querySelector('.input_ol')
+        pholderElement.style.cursor='pointer'
+        pholderElement.addEventListener('click', () => {
+            optionsElement.style.display = optionsElement.style.display === 'block' ? 'none' : 'block'
+        })
+        
+        optionsElement.addEventListener('click', (event) => {
+            if (event.target.classList.contains('option')) {
+            const selectedValue = event.target.dataset.value
+            var selectedOption = options.find(option => option.value === selectedValue)
+            if(options.length == 0){
+                options=Array.from(this.getElementsByTagName('option'))
+                selectedOption = options.find(option => option.value === selectedValue)
+                inputol.value = selectedOption.textContent
+            }else{
+                inputol.value = selectedOption.textContent
+            }
+            optionsElement.style.display = 'none'
+            }
+        })
+    }
+    getContent() {
+        return this.shadowRoot.querySelector('.input_ol')
+    }
+    getOptions() {
+        return this.shadowRoot.querySelector('.options')
+    }
+    getOption() {
+        return this.shadowRoot.querySelectorAll('.option')
+    }
+    dynamicsetoption(e) {
+        const wrap = this.shadowRoot.querySelector('.options')
+        wrap.innerHTML=e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
+    }
+}
+customElements.define('zy-login-dropdown', zyloginDropDown);
+// <zy-edit-dropdown></zy-edit-dropdown>标签

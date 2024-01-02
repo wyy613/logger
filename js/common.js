@@ -1,5 +1,5 @@
 
-export {showMessage,showTimeout,showLoading,getPrompt,hideLoading,setzyInput,getzyInput}
+export {showMessage,showTimeout,showLoading,getPrompt,hideLoading,setzyInput,getzyInput,getResultPrompt}
 
 const constPromptInfo={
     prompt:{zh:"提示",en:"Prompt"},
@@ -78,6 +78,22 @@ function hideLoading(d){
     }
 }
 
+function getResultPrompt(name, curLanguage) {
+    return new Promise((resolve, reject) => {
+        fetch('../json/' + curLanguage + '.json')
+        .then(response => response.json())
+        .then(data => {
+            if (data[name]) {
+                resolve(data[name])
+            } else {
+                reject(`Translation not found for '${name}'`)
+            }
+        })
+        .catch(error => {
+            reject(error)
+        })
+    })
+}
 
 
 // loadLanguage();

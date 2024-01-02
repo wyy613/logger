@@ -1,0 +1,13 @@
+{
+    "login-form-title":"Login",
+    "login-language-select":{
+        "placeholder":"Select language",
+        "value":"English"
+    },
+    "login-password":"Input password",
+    "login-password-prompt":"Password 6-8 digits, supports numbers, upper and lower case letters and special characters",
+    "login-forget-password":"Forget password",
+    "login-submit":"Login",
+    "result-Succ":"Set succeeded",
+    "result-Failed":"Set Failed"
+}

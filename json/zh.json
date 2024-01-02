@@ -1,0 +1,13 @@
+{
+    "login-form-title":"登录",
+    "login-language-select":{
+        "placeholder":"请选择语言",
+        "value":"中文简体"
+    },
+    "login-password":"请输入密码",
+    "login-password-prompt":"密码6-8位，支持数字、大小写字母和特殊字符",
+    "login-forget-password":"忘记密码",
+    "login-submit":"登录",
+    "result-Succ":"设置成功",
+    "result-Failed":"设置失败"
+}
