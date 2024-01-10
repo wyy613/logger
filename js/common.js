@@ -1,5 +1,5 @@
 
-export { showMessage, showTimeout, showLoading, getPrompt, hideLoading, setzyInput, getzyInput, getResultPrompt }
+export { showMessage, showTimeout, showLoading, getPrompt, hideLoading, setzyInput, getzyInput, getResultPrompt, setContentHeight }
 
 const constPromptInfo = {
     prompt: { zh: "提示", en: "Prompt" },
@@ -135,4 +135,13 @@ function getzyInput (name) {
     const customDropdown = document.querySelector(`${name}`)
     const innerDivContent = customDropdown.getContent()
     return innerDivContent.value
+}
+
+
+// 根据窗体高度自动显示内容页滚动条
+function setContentHeight () {
+    const pcontent = document.querySelector('.pcontent')
+    var windowHeight = window.innerHeight
+    pcontent.style.maxHeight = (windowHeight) + 'px'
+    pcontent.style.overflowY = 'auto'
 }

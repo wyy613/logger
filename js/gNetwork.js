@@ -1,6 +1,6 @@
-import { Ajax } from "./config.js"
-import { zyInput } from './zyElement.js'
-import { showMessage, getPrompt, setzyInput, getzyInput } from './common.js'
+import {Ajax} from "./config.js"
+import {zyInput} from './zyElement.js'
+import {showMessage,getPrompt,setzyInput,getzyInput,setContentHeight} from './common.js'
 const set_butt = document.querySelector(".set_butt")
 const refresh = document.querySelector('.refresh')
 var alloptionsvalue = []

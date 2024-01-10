@@ -3,7 +3,7 @@ import { Pagination } from "./pagination.js"
 import { zyListInput } from "./zyElement.js"
 import { arr } from "./expo.js"
 import { Ajax } from "./config.js"
-import { showMessage, showTimeout, getPrompt, hideLoading, setzyInput, getzyInput } from './common.js'
+import { showMessage, getPrompt, setzyInput, getzyInput, setContentHeight } from './common.js'
 
 const snParseUtil = new SNParseUtil()
 const refresh = document.querySelector('.refresh')
@@ -82,6 +82,7 @@ function initlist () {
 // initlist()
 initlist().then((res) => {
     if (res) {
+        setContentHeight()
         editdevice()
         deletedevice()
         disablecanport()
@@ -406,13 +407,6 @@ function devicePort (para, sta) {
     }
     return para.inf = "--"
 }
-function showLoading () {
-    var d = document.createElement("div")
-    d.innerHTML = '<link rel="stylesheet" href="../css/guide.css"><div class="load"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div>';
-    d.setAttribute("class", "msg")
-    d.setAttribute("id", "msg-load")
-    e.appendChild(d)
-}
 // oaddassi.addEventListener('click',function(){
 //     if(oaddassi.style.cursor != 'not-allowed'){
 //         addressAssign()
@@ -581,6 +575,7 @@ oadd.addEventListener('click', function () {
                     gclosehtml()
                     initlist().then((res) => {
                         if (res) {
+                            setContentHeight()
                             editdevice()
                             deletedevice()
                             disablecanport()
@@ -711,6 +706,7 @@ function editdevice () {
                                 showMessage(getPrompt("setSucc"), 2000, 'succContent', '&#xe616;')
                                 initlist().then((res) => {
                                     if (res) {
+                                        setContentHeight()
                                         editdevice()
                                         deletedevice()
                                         disablecanport()
@@ -722,6 +718,7 @@ function editdevice () {
                                 showMessage(getPrompt("setFailed"), 2000, 'failedContent', '&#xed1b;')
                                 initlist().then((res) => {
                                     if (res) {
+                                        setContentHeight()
                                         editdevice()
                                         deletedevice()
                                         disablecanport()
@@ -792,6 +789,7 @@ async function openDeleteForm (ele) {
                         showMessage(getPrompt("setFailed"), 2000, 'failedContent', '&#xed1b;')
                         initlist().then((res) => {
                             if (res) {
+                                setContentHeight()
                                 editdevice()
                                 deletedevice()
                                 disablecanport()
@@ -1149,6 +1147,7 @@ bdelete.addEventListener('click', function () {
                     showMessage(getPrompt("setSucc"), 2000, 'succContent', '&#xe616;')
                     initlist().then((res) => {
                         if (res) {
+                            setContentHeight()
                             editdevice()
                             deletedevice()
                             disablecanport()
@@ -1159,6 +1158,7 @@ bdelete.addEventListener('click', function () {
                     showMessage(getPrompt("setFailed"), 2000, 'failedContent', '&#xed1b;')
                     initlist().then((res) => {
                         if (res) {
+                            setContentHeight()
                             editdevice()
                             deletedevice()
                             disablecanport()
@@ -1191,6 +1191,7 @@ nextpage.addEventListener('click', function () {
 refresh.addEventListener('click', function () {
     initlist().then((res) => {
         if (res) {
+            setContentHeight()
             editdevice()
             deletedevice()
             disablecanport()
@@ -1198,4 +1199,9 @@ refresh.addEventListener('click', function () {
         }
     })
 })
+
+
+
+
+
 
