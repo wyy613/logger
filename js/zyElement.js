@@ -1,19 +1,19 @@
 // <zy-input></zy-input>标签
 
-export class zyInput extends HTMLElement{
-    constructor(){
-        super()  
+export class zyInput extends HTMLElement {
+    constructor() {
+        super()
         this.attachShadow({ mode: 'open' })
-        this.hidden=true
+        this.hidden = true
     }
-    connectedCallback() {
-        const title=this.getAttribute('titlename')
-        const placeholder=this.getAttribute('placeholder')
-        const prompt=this.getAttribute('prompt')
-        const inunit=this.getAttribute('inunit')
-        const regex=this.getAttribute('regex')
-        const disabled=this.getAttribute('disabled')
-        this.shadowRoot.innerHTML =`
+    connectedCallback () {
+        const title = this.getAttribute('titlename')
+        const placeholder = this.getAttribute('placeholder')
+        const prompt = this.getAttribute('prompt')
+        const inunit = this.getAttribute('inunit')
+        const regex = this.getAttribute('regex')
+        const disabled = this.getAttribute('disabled')
+        this.shadowRoot.innerHTML = `
         <style>
         body{
             font-family: pingfang SC,helvetica neue,arial,hiragino sans gb,microsoft yahei ui,microsoft yahei,simsun,sans-serif!important;
@@ -76,18 +76,18 @@ export class zyInput extends HTMLElement{
         </div>
         <span class="deIprompt">${prompt}</span>
         </div>`
-        
-        const inputElement=this.shadowRoot.querySelector('.input_ol')
-        const deInput=this.shadowRoot.querySelector('.deItext')
+
+        const inputElement = this.shadowRoot.querySelector('.input_ol')
+        const deInput = this.shadowRoot.querySelector('.deItext')
         // input：enable使能  disable禁能
-        if(disabled == 'enable'){
-            inputElement.disabled=false
-            deInput.style.backgroundColor='#F9FAFC'
-            inputElement.style.cursor='auto'
-        }else{
-            inputElement.disabled=true
-            deInput.style.backgroundColor='#EBF0F5'
-            inputElement.style.cursor='not-allowed'
+        if (disabled == 'enable') {
+            inputElement.disabled = false
+            deInput.style.backgroundColor = '#F9FAFC'
+            inputElement.style.cursor = 'auto'
+        } else {
+            inputElement.disabled = true
+            deInput.style.backgroundColor = '#EBF0F5'
+            inputElement.style.cursor = 'not-allowed'
         }
         // 在第一个 zyInput 实例中加载样式表
         if (!document.querySelector('.zycustom-loaded')) {
@@ -97,43 +97,43 @@ export class zyInput extends HTMLElement{
             styleSheet.setAttribute('class', 'zycustom-loaded')
             this.shadowRoot.appendChild(styleSheet)
         }
-        inputElement.addEventListener('input',function(event){
-            var inputValue=this.value
-            var inputregex=new RegExp(regex)
-            if (regex !== ''){
-                if(inputregex.test(inputValue)){
-                    deInput.style.border='1px solid #F5F6F9'
+        inputElement.addEventListener('input', function (event) {
+            var inputValue = this.value
+            var inputregex = new RegExp(regex)
+            if (regex !== '') {
+                if (inputregex.test(inputValue)) {
+                    deInput.style.border = '1px solid #F5F6F9'
                     // deInput.style.backgroundColor='#F9FAFC'
-                }else{
-                    deInput.style.border='1px solid #DA4E51'
+                } else {
+                    deInput.style.border = '1px solid #DA4E51'
                     // deInput.style.backgroundColor='#FCF1F1'
                 }
             }
         })
-        this.hidden=false
+        this.hidden = false
     }
-    getContent(){
+    getContent () {
         return this.shadowRoot.querySelector('.input_ol')
     }
-    getinputText(){
+    getinputText () {
         return this.shadowRoot.querySelector('.deItext')
     }
-    setdisable(e){
-        if(e == 'enable'){
-            this.shadowRoot.querySelector('.input_ol').disabled=false
-            this.shadowRoot.querySelector('.deItext').style.backgroundColor='#F9FAFC'
-            this.shadowRoot.querySelector('.input_ol').style.cursor='auto'
-        }else{
-            this.shadowRoot.querySelector('.input_ol').disabled=true
-            this.shadowRoot.querySelector('.deItext').style.backgroundColor='#EBF0F5'
-            this.shadowRoot.querySelector('.input_ol').style.cursor='not-allowed'
+    setdisable (e) {
+        if (e == 'enable') {
+            this.shadowRoot.querySelector('.input_ol').disabled = false
+            this.shadowRoot.querySelector('.deItext').style.backgroundColor = '#F9FAFC'
+            this.shadowRoot.querySelector('.input_ol').style.cursor = 'auto'
+        } else {
+            this.shadowRoot.querySelector('.input_ol').disabled = true
+            this.shadowRoot.querySelector('.deItext').style.backgroundColor = '#EBF0F5'
+            this.shadowRoot.querySelector('.input_ol').style.cursor = 'not-allowed'
         }
     }
     // setValue(x){
     //     this.shadowRoot.querySelector('.input_ol').value=x
     // }
 }
-customElements.define("zy-input",zyInput)
+customElements.define("zy-input", zyInput)
 // <zy-input>
 
 // <zy-dropdown></zy-dropdown>标签
@@ -142,12 +142,12 @@ customElements.define("zy-input",zyInput)
     <option value="DTSD1352" >DTSD1352</option>
     <option value="AC10H">AC10H</option>
 </zy-dropdown> */
-class zyDropDown extends HTMLElement{
+class zyDropDown extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
-      }
-    connectedCallback() {
+    }
+    connectedCallback () {
         const title = this.getAttribute('titlename')
         const placeholder = this.getAttribute('placeholder')
         var options = Array.from(this.getElementsByTagName('option'))
@@ -228,54 +228,54 @@ class zyDropDown extends HTMLElement{
         const pholderElement = this.shadowRoot.querySelector('.selectinput')
         const optionsElement = this.shadowRoot.querySelector('.options')
         var inputol = this.shadowRoot.querySelector('.input_ol')
-        pholderElement.style.cursor='pointer'
+        pholderElement.style.cursor = 'pointer'
         pholderElement.addEventListener('click', () => {
             optionsElement.style.display = optionsElement.style.display === 'block' ? 'none' : 'block'
         })
-        inputol.addEventListener('keydown',function(e){
+        inputol.addEventListener('keydown', function (e) {
             e.preventDefault() //阻止键盘输入
         })
         optionsElement.addEventListener('click', (event) => {
             if (event.target.classList.contains('option')) {
-            const selectedValue = event.target.dataset.value
-            var selectedOption = options.find(option => option.value === selectedValue)
-            if(options.length == 0){
-                options=Array.from(this.getElementsByTagName('option'))
-                selectedOption = options.find(option => option.value === selectedValue)
-                inputol.value = selectedOption.textContent
-            }else{
-                inputol.value = selectedOption.textContent
-            }
-            optionsElement.style.display = 'none'
-            // pholderElement.style.color = 'black'
+                const selectedValue = event.target.dataset.value
+                var selectedOption = options.find(option => option.value === selectedValue)
+                if (options.length == 0) {
+                    options = Array.from(this.getElementsByTagName('option'))
+                    selectedOption = options.find(option => option.value === selectedValue)
+                    inputol.value = selectedOption.textContent
+                } else {
+                    inputol.value = selectedOption.textContent
+                }
+                optionsElement.style.display = 'none'
+                // pholderElement.style.color = 'black'
             }
         })
     }
-    getContent() {
+    getContent () {
         return this.shadowRoot.querySelector('.input_ol')
     }
-    getOptions() {
+    getOptions () {
         return this.shadowRoot.querySelector('.options')
     }
-    getOption() {
+    getOption () {
         return this.shadowRoot.querySelectorAll('.option')
     }
-    dynamicsetoption(e) {
+    dynamicsetoption (e) {
         const wrap = this.shadowRoot.querySelector('.options')
-        wrap.innerHTML=e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
+        wrap.innerHTML = e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
     }
 }
 customElements.define('zy-dropdown', zyDropDown);
 // <zy-dropdown></zy-dropdown>标签
 // zy-step
-class zystep extends HTMLElement{
-    constructor(){
+class zystep extends HTMLElement {
+    constructor() {
         super()
-        this.attachShadow({ mode: 'open' }); 
+        this.attachShadow({ mode: 'open' });
     }
-    connectedCallback() {
-        const stepnum=this.getAttribute("stepnum")
-        this.shadowRoot.innerHTML=`
+    connectedCallback () {
+        const stepnum = this.getAttribute("stepnum")
+        this.shadowRoot.innerHTML = `
         <div class="g_wrap">
             <div class="line"></div>
             <div class="g_step">
@@ -305,13 +305,13 @@ class zystep extends HTMLElement{
                 </div>
             </div>
         </div>`
-        const steparr=this.shadowRoot.querySelectorAll('.step_icon')
-        for(var i=0;i<steparr.length;i++){
-            if(i == stepnum){
-                steparr[i].innerHTML='&#xe8b5;'
-                steparr[i].classList.add('curstep')  
-            }else{
-                steparr[i].innerHTML='&#xe601;'
+        const steparr = this.shadowRoot.querySelectorAll('.step_icon')
+        for (var i = 0; i < steparr.length; i++) {
+            if (i == stepnum) {
+                steparr[i].innerHTML = '&#xe8b5;'
+                steparr[i].classList.add('curstep')
+            } else {
+                steparr[i].innerHTML = '&#xe601;'
                 steparr[i].classList.remove('curstep')
             }
         }
@@ -325,20 +325,20 @@ class zystep extends HTMLElement{
         }
     }
 }
-customElements.define("zy-step",zystep)
+customElements.define("zy-step", zystep)
 // zy-step
 
 // zyListInput
-export class zyListInput extends HTMLElement{
-    constructor(){
-        super()  
+export class zyListInput extends HTMLElement {
+    constructor() {
+        super()
         this.attachShadow({ mode: 'open' });
     }
-    connectedCallback() {
-        const inunit=this.getAttribute('inunit')
-        const regex=this.getAttribute('regex')
-        const disabled=this.getAttribute('disabled')
-        this.shadowRoot.innerHTML =`
+    connectedCallback () {
+        const inunit = this.getAttribute('inunit')
+        const regex = this.getAttribute('regex')
+        const disabled = this.getAttribute('disabled')
+        this.shadowRoot.innerHTML = `
         <style>/* zy-listinput */
         body{
             font-family: pingfang SC,helvetica neue,arial,hiragino sans gb,microsoft yahei ui,microsoft yahei,simsun,sans-serif!important;
@@ -379,20 +379,20 @@ export class zyListInput extends HTMLElement{
         <span class="liunit">${inunit}</span>
         </div>
         </div>`
-        
-        const inputElement=this.shadowRoot.querySelector('.list_input')
-        const listItext=this.shadowRoot.querySelector('.listItext')
+
+        const inputElement = this.shadowRoot.querySelector('.list_input')
+        const listItext = this.shadowRoot.querySelector('.listItext')
         // input：enable使能  disable禁能
-        if(disabled == 'enable'){
-            this.shadowRoot.querySelector('.list_input').disabled=false
-            listItext.style.backgroundColor='#F9FAFC'
-            inputElement.style.cursor='auto'
-        }else{
-            this.shadowRoot.querySelector('.list_input').disabled=true
-            listItext.style.backgroundColor='#EBF0F5'
-            inputElement.style.cursor='not-allowed'
+        if (disabled == 'enable') {
+            this.shadowRoot.querySelector('.list_input').disabled = false
+            listItext.style.backgroundColor = '#F9FAFC'
+            inputElement.style.cursor = 'auto'
+        } else {
+            this.shadowRoot.querySelector('.list_input').disabled = true
+            listItext.style.backgroundColor = '#EBF0F5'
+            inputElement.style.cursor = 'not-allowed'
         }
-        
+
         // inputElement.addEventListener('input',function(event){
         //     var inputValue=parseInt(this.value)
         //     var inputregex=new RegExp(regex)
@@ -405,28 +405,28 @@ export class zyListInput extends HTMLElement{
         //     }
         // })
     }
-    getContent() {
+    getContent () {
         return this.shadowRoot.querySelector('.list_input')
     }
-    getinputText(){
+    getinputText () {
         return this.shadowRoot.querySelector('.listItext')
     }
 }
-customElements.define("zy-listinput",zyListInput)
+customElements.define("zy-listinput", zyListInput)
 // zyListInput
 
 // zyProgressBar
-export class zyProgressBar extends HTMLElement{
-    constructor(){
-        super()  
+export class zyProgressBar extends HTMLElement {
+    constructor() {
+        super()
         this.attachShadow({ mode: 'open' })
     }
-    connectedCallback() {
-        const curr=this.getAttribute('curr')
-        const total=this.getAttribute('total')
-        const percent=this.getAttribute('percent')
-        const barwidth=this.getAttribute('width')
-        this.shadowRoot.innerHTML =`
+    connectedCallback () {
+        const curr = this.getAttribute('curr')
+        const total = this.getAttribute('total')
+        const percent = this.getAttribute('percent')
+        const barwidth = this.getAttribute('width')
+        this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="../css/zycustom.css">
         <div class="probar">
         <span class="pbtitle">当前查询</span>
@@ -438,23 +438,23 @@ export class zyProgressBar extends HTMLElement{
         // const baranima=this.shadowRoot.querySelector('.baranima')
         // baranima.style.width=`${percent}%`
     }
-    getContent() {
+    getContent () {
         return this.shadowRoot.querySelector('.probar')
     }
 }
-customElements.define("zy-progressbar",zyProgressBar)
+customElements.define("zy-progressbar", zyProgressBar)
 // zyProcessBar
 
 
 
 
 // </zy-edit-dropdown> 
-export class zyEditDropDown extends HTMLElement{
+export class zyEditDropDown extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
-      }
-    connectedCallback() {
+    }
+    connectedCallback () {
         const placeholder = this.getAttribute('placeholder');
         var options = Array.from(this.getElementsByTagName('option'));
         // <div class="placeholder">${placeholder}</div>
@@ -534,38 +534,38 @@ export class zyEditDropDown extends HTMLElement{
         const pholderElement = this.shadowRoot.querySelector('.selectinput')
         const optionsElement = this.shadowRoot.querySelector('.options')
         const inputol = this.shadowRoot.querySelector('.input_ol')
-        pholderElement.style.cursor='pointer'
+        pholderElement.style.cursor = 'pointer'
         pholderElement.addEventListener('click', () => {
             optionsElement.style.display = optionsElement.style.display === 'block' ? 'none' : 'block'
         })
-        
+
         optionsElement.addEventListener('click', (event) => {
             if (event.target.classList.contains('option')) {
-            const selectedValue = event.target.dataset.value
-            var selectedOption = options.find(option => option.value === selectedValue)
-            if(options.length == 0){
-                options=Array.from(this.getElementsByTagName('option'))
-                selectedOption = options.find(option => option.value === selectedValue)
-                inputol.value = selectedOption.textContent
-            }else{
-                inputol.value = selectedOption.textContent
-            }
-            optionsElement.style.display = 'none'
+                const selectedValue = event.target.dataset.value
+                var selectedOption = options.find(option => option.value === selectedValue)
+                if (options.length == 0) {
+                    options = Array.from(this.getElementsByTagName('option'))
+                    selectedOption = options.find(option => option.value === selectedValue)
+                    inputol.value = selectedOption.textContent
+                } else {
+                    inputol.value = selectedOption.textContent
+                }
+                optionsElement.style.display = 'none'
             }
         })
     }
-    getContent() {
+    getContent () {
         return this.shadowRoot.querySelector('.input_ol')
     }
-    getOptions() {
+    getOptions () {
         return this.shadowRoot.querySelector('.options')
     }
-    getOption() {
+    getOption () {
         return this.shadowRoot.querySelectorAll('.option')
     }
-    dynamicsetoption(e) {
+    dynamicsetoption (e) {
         const wrap = this.shadowRoot.querySelector('.options')
-        wrap.innerHTML=e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
+        wrap.innerHTML = e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
     }
 }
 customElements.define('zy-edit-dropdown', zyEditDropDown);
@@ -574,16 +574,16 @@ customElements.define('zy-edit-dropdown', zyEditDropDown);
 
 
 // zyEditInput
-export class zyEditInput extends HTMLElement{
-    constructor(){
-        super()  
+export class zyEditInput extends HTMLElement {
+    constructor() {
+        super()
         this.attachShadow({ mode: 'open' })
     }
-    connectedCallback() {
-        const inunit=this.getAttribute('inunit')
-        const regex=this.getAttribute('regex')
-        const disabled=this.getAttribute('disabled')
-        this.shadowRoot.innerHTML =`
+    connectedCallback () {
+        const inunit = this.getAttribute('inunit')
+        const regex = this.getAttribute('regex')
+        const disabled = this.getAttribute('disabled')
+        this.shadowRoot.innerHTML = `
         <style>/* zy-listinput */
         body{
             font-family: pingfang SC,helvetica neue,arial,hiragino sans gb,microsoft yahei ui,microsoft yahei,simsun,sans-serif!important;
@@ -634,42 +634,42 @@ export class zyEditInput extends HTMLElement{
             </div>
             <span class="editprompt"></span>
         </div>`
-        
-        const inputElement=this.shadowRoot.querySelector('.list_input')
-        const listItext=this.shadowRoot.querySelector('.listItext')
+
+        const inputElement = this.shadowRoot.querySelector('.list_input')
+        const listItext = this.shadowRoot.querySelector('.listItext')
         // input：enable使能  disable禁能
-        if(disabled == 'enable'){
-            this.shadowRoot.querySelector('.list_input').disabled=false
-            listItext.style.backgroundColor='#F9FAFC'
-            inputElement.style.cursor='auto'
-        }else{
-            this.shadowRoot.querySelector('.list_input').disabled=true
-            listItext.style.backgroundColor='#EBF0F5'
-            inputElement.style.cursor='not-allowed'
+        if (disabled == 'enable') {
+            this.shadowRoot.querySelector('.list_input').disabled = false
+            listItext.style.backgroundColor = '#F9FAFC'
+            inputElement.style.cursor = 'auto'
+        } else {
+            this.shadowRoot.querySelector('.list_input').disabled = true
+            listItext.style.backgroundColor = '#EBF0F5'
+            inputElement.style.cursor = 'not-allowed'
         }
     }
-    getContent() {
+    getContent () {
         return this.shadowRoot.querySelector('.list_input')
     }
-    getlistItext(){
+    getlistItext () {
         return this.shadowRoot.querySelector('.listItext')
     }
-    geteditprompt(){
+    geteditprompt () {
         return this.shadowRoot.querySelector('.editprompt')
     }
 }
-customElements.define("zy-edit-input",zyEditInput)
+customElements.define("zy-edit-input", zyEditInput)
 // zyEditInput
 
 
 
 // </zy-edit-dropdown> 
-export class zyloginDropDown extends HTMLElement{
+export class zyloginDropDown extends HTMLElement {
     constructor() {
         super()
         this.attachShadow({ mode: 'open' })
-      }
-    connectedCallback() {
+    }
+    connectedCallback () {
         const placeholder = this.getAttribute('placeholder');
         var options = Array.from(this.getElementsByTagName('option'));
         // <div class="placeholder">${placeholder}</div>
@@ -755,38 +755,38 @@ export class zyloginDropDown extends HTMLElement{
         const pholderElement = this.shadowRoot.querySelector('.selectinput')
         const optionsElement = this.shadowRoot.querySelector('.options')
         const inputol = this.shadowRoot.querySelector('.input_ol')
-        pholderElement.style.cursor='pointer'
+        pholderElement.style.cursor = 'pointer'
         pholderElement.addEventListener('click', () => {
             optionsElement.style.display = optionsElement.style.display === 'block' ? 'none' : 'block'
         })
-        
+
         optionsElement.addEventListener('click', (event) => {
             if (event.target.classList.contains('option')) {
-            const selectedValue = event.target.dataset.value
-            var selectedOption = options.find(option => option.value === selectedValue)
-            if(options.length == 0){
-                options=Array.from(this.getElementsByTagName('option'))
-                selectedOption = options.find(option => option.value === selectedValue)
-                inputol.value = selectedOption.textContent
-            }else{
-                inputol.value = selectedOption.textContent
-            }
-            optionsElement.style.display = 'none'
+                const selectedValue = event.target.dataset.value
+                var selectedOption = options.find(option => option.value === selectedValue)
+                if (options.length == 0) {
+                    options = Array.from(this.getElementsByTagName('option'))
+                    selectedOption = options.find(option => option.value === selectedValue)
+                    inputol.value = selectedOption.textContent
+                } else {
+                    inputol.value = selectedOption.textContent
+                }
+                optionsElement.style.display = 'none'
             }
         })
     }
-    getContent() {
+    getContent () {
         return this.shadowRoot.querySelector('.input_ol')
     }
-    getOptions() {
+    getOptions () {
         return this.shadowRoot.querySelector('.options')
     }
-    getOption() {
+    getOption () {
         return this.shadowRoot.querySelectorAll('.option')
     }
-    dynamicsetoption(e) {
+    dynamicsetoption (e) {
         const wrap = this.shadowRoot.querySelector('.options')
-        wrap.innerHTML=e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
+        wrap.innerHTML = e.map(option => `<div class="option" title='' data-value="${option.value}">${option.textContent}</div>`).join('')
     }
 }
 customElements.define('zy-login-dropdown', zyloginDropDown);

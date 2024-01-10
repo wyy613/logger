@@ -1,7 +1,6 @@
 import {Ajax} from "./config.js"
 import {zyInput} from './zyElement.js'
 import {showMessage,getPrompt,setzyInput,getzyInput} from './common.js'
-const requestBaseURL="./cgi-bin"
 const setbutt = document.querySelector(".set_butt")
 const refresh=document.querySelector('.refresh')
 var obj={
@@ -20,7 +19,7 @@ selects.forEach((ele,i) => {
     alloptionsvalue.push([...ele.getOption()].map((option) => option.dataset.value))
 })
 function initInvNum(){
-    Ajax.get(`${requestBaseURL}/loggerpara_face_post`,function(c){
+    Ajax.get(`/logger_face_get`,function(c){
         c=JSON.parse(c)
         console.log(c)
         try{
@@ -149,7 +148,7 @@ setbutt.addEventListener("click",function(){
         getoptionid('matchR485','.enable485', 2)
         getoptionid('power_supply','.enable12V1Apowersupply', 3)
         console.log(obj)
-        Ajax.post(`${requestBaseURL}/device_online_num`,JSON.stringify(obj),function(c){
+        Ajax.post(`/device_online_num`,JSON.stringify(obj),function(c){
             c=JSON.parse(c)
             console.log(c)
             if(c.state == 1){
@@ -174,11 +173,12 @@ function getoptionid(e,name,id){
 const nextpage=document.querySelector('.nextpage')
 nextpage.addEventListener('click',function(){
     const parentDoc = window.parent.document;
-    parentDoc.querySelector('.iframeCon').src='../html/gTime.html'
-    const onclk=parentDoc.querySelectorAll('.nav2li')
-    onclk[0].classList.remove("li2clk")
-    onclk[1].classList.add("li2clk")
-    parentDoc.querySelector(".cnav2").innerHTML=onclk[1].querySelector(".navname").innerHTML
+    parentDoc.querySelectorAll('.nav2li')[1].click()
+    // parentDoc.querySelector('.iframeCon').src='../html/gTime.html'
+    // const onclk=parentDoc.querySelectorAll('.nav2li')
+    // onclk[0].classList.remove("li2clk")
+    // onclk[1].classList.add("li2clk")
+    // parentDoc.querySelector(".cnav2").innerHTML=onclk[1].querySelector(".navname").innerHTML
 })
 // refresh page
 refresh.addEventListener('click',function(){

@@ -1,29 +1,56 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='UTF-8'>
     <title>Document</title>
     <link rel="stylesheet" href="../css/overview.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body>
     <div class="pcontent">
         <div class="basicinfo">
-            <div class="para_sn para">
-                <span class="para_sn_title para_title">SN</span>
-                <span class="para_sn_value para_value">Z112302201530241</span>
+            <div class="para">
+                <span class="para_title">SN</span>
+                <span class="para_value sn_value">Z112302201530241</span>
             </div>
-            <div class="para_rssi para">
-                <span class="para_rssi_title para_title">信号强度</span>
-                <span class="para_rssi_value para_value">99</span>
+            <div class="para">
+                <span class="para_title">信号强度</span>
+                <span class="para_value rssi_value">99</span>
             </div>
-            <div class="para_fwversion para">
-                <span class="para_fwversion_title para_title">Firmwareversion</span>
-                <span class="para_fwversion_title para_value">V16.46.02.00</span>
+            <div class="para">
+                <span class="para_title">固件版本</span>
+                <span class="para_value soft_version_value">V16.46.02.00</span>
             </div>
-            <div class="para_update_time para">
-                <span class="para_update_time_title para_title">更新时间</span>
-                <span class="para_update_time_value para_value">06:37:41 2023.12.19</span>
+            <div class="para">
+                <span class="para_title">更新时间</span>
+                <span class="para_value update_time_value">06:37:41 2023.12.19</span>
+            </div>
+            <div class="para">
+                <span class="para_title">COM1</span>
+                <span class="para_value com1_value">2</span>
+                <span class="para_unit">台</span>
+            </div>
+            <div class="para">
+                <span class="para_title">COM2</span>
+                <span class="para_value com2_value">2</span>
+                <span class="para_unit">台</span>
+            </div>
+            <div class="para">
+                <span class="para_title">COM3</span>
+                <span class="para_value com3_value">2</span>
+                <span class="para_unit">台</span>
+            </div>
+            <div class="para">
+                <span class="para_title">COM4</span>
+                <span class="para_value com4_value">2</span>
+                <span class="para_unit">台</span>
+            </div>
+            <div class="para">
+                <span class="para_title">CAN</span>
+                <span class="para_value can_value">9</span>
+                <span class="para_unit">台</span>
             </div>
         </div>
         <div class="realtimeinfo">
@@ -34,7 +61,7 @@
                     </div>
                     <div class="today_gen_leftcon">
                         <span class="gen_name">今日发电(kWh)</span>
-                        <span class="gen_value">1.20</span>
+                        <span class="gen_value today_gen_value">1.20</span>
                     </div>
                 </div>
                 <div class="total_gen">
@@ -43,7 +70,7 @@
                     </div>
                     <div class="today_gen_leftcon">
                         <span class="gen_name">累计发电(kWh)</span>
-                        <span class="gen_value">6504.30</span>
+                        <span class="gen_value total_gen_value">6504.30</span>
                     </div>
                 </div>
             </div>
@@ -54,31 +81,96 @@
                             <span class="topology_img iconfont">&#xe630;</span>
                         </div>
                         <div class="topology_item_info">
-                            
+                            <div class="topology_item_info_title">PV</div>
+                            <div class="topology_item_info_content">
+                                <span class="info_label">PV功率</span>
+                                <span class="info_value ppv_value">2.35</span>
+                                <span class="info_unit">kW</span>
+                            </div>
                         </div>
                     </div>
                     <div class="topology_item topology_batt">
                         <div class="topology_icon">
                             <span class="topology_img iconfont">&#xe62f;</span>
                         </div>
-                        <div class="topology_item_info"></div>
+                        <div class="topology_item_info">
+                            <div class="topology_item_info_title">电池</div>
+                            <div class="topology_item_info_content">
+                                <span class="info_label">电池功率</span>
+                                <span class="info_value pbattery_value">2.35</span>
+                                <span class="info_unit">kW</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="topology_item topology_load">
                         <div class="topology_icon">
                             <span class="topology_img iconfont">&#xe62e;</span>
                         </div>
-                        <div class="topology_item_info"></div>
+                        <div class="topology_item_info">
+                            <div class="topology_item_info_title">负载</div>
+                            <div class="topology_item_info_content">
+                                <span class="info_label">负载功率</span>
+                                <span class="info_value pload_value">2.35</span>
+                                <span class="info_unit">kW</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="topology_item topology_grid">
                         <div class="topology_icon">
                             <span class="topology_img iconfont">&#xe6ab;</span>
                         </div>
-                        <div class="topology_item_info"></div>
+                        <div class="topology_item_info">
+                            <div class="topology_item_info_title">电网</div>
+                            <div class="topology_item_info_content">
+                                <div class="info_params">
+                                    <span class="info_label">A相电表功率</span>
+                                    <span class="info_value pmeter_a_value">2.35</span>
+                                    <span class="info_unit">kW</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">今日买电</span>
+                                    <span class="info_value today_buy_gen_value">2.35</span>
+                                    <span class="info_unit">kWh</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">B相电表功率</span>
+                                    <span class="info_value pmeter_b_value">2.35</span>
+                                    <span class="info_unit">kW</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">今日卖电</span>
+                                    <span class="info_value today_sell_gen_value">2.35</span>
+                                    <span class="info_unit">kWh</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">C相电表功率</span>
+                                    <span class="info_value pmeter_c_value">2.35</span>
+                                    <span class="info_unit">kW</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">累计买电</span>
+                                    <span class="info_value total_buy_gen_value">2.356</span>
+                                    <span class="info_unit">kWh</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">电表总功率</span>
+                                    <span class="info_value pmeter_sum_value">2.35</span>
+                                    <span class="info_unit">kW</span>
+                                </div>
+                                <div class="info_params">
+                                    <span class="info_label">累计卖电</span>
+                                    <span class="info_value total_sell_gen_value">2.35</span>
+                                    <span class="info_unit">kWh</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
+    <script type="module" src="../js/overview.js"></script>
 </body>
+
 </html>

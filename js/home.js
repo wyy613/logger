@@ -1,33 +1,33 @@
-const li2=document.querySelectorAll(".second_list")
-const navul2=document.querySelectorAll(".nav2ul")
-const onclk=document.querySelectorAll(".nav2li")
-const linum=[]
-const nav1icon=["&#xe650;","&#xe665;","&#xe773;","&#xe660;","&#xe636;","&#xe946;","&#xe634;"]
-var currul=0,currli=0
+const li2 = document.querySelectorAll(".second_list")
+const navul2 = document.querySelectorAll(".nav2ul")
+const onclk = document.querySelectorAll(".nav2li")
+const linum = []
+const nav1icon = ["&#xe650;", "&#xe665;", "&#xe773;", "&#xe660;", "&#xe636;", "&#xe946;", "&#xe634;"]
+var currul = 0, currli = 0
 // iframe
 var riframe
-const exitbutt=document.querySelector('.exit')
+const exitbutt = document.querySelector('.exit')
 
 // 页面初始化函数
 getPageName(currli)
 
 // 二级导航 收缩展开
-li2.forEach((e,inx) => {
+li2.forEach((e, inx) => {
     // linum[] 记录每个一级下二级导航栏的个数
-    linum[inx]=navul2[inx].querySelectorAll(".nav2li").length
-    li2[inx].onclick = function(){
+    linum[inx] = navul2[inx].querySelectorAll(".nav2li").length
+    li2[inx].onclick = function () {
         if (currul === inx) {
             return
         } else {
-            navul2[currul].style.height="0"
-            navul2[inx].style.height=`${linum[inx]*36}px`
-            currul=inx
+            navul2[currul].style.height = "0"
+            navul2[inx].style.height = `${linum[inx] * 36}px`
+            currul = inx
         }
     }
 })
 // 获取焦点的导航 背景色
-for(let i=0;i<onclk.length;i++){
-    onclk[i].onclick = function(){
+for (let i = 0; i < onclk.length; i++) {
+    onclk[i].onclick = function () {
         // 防止冒泡
         onclk[i].addEventListener("click", function (e) {
             window.event ? (window.event.cancelBubble = true) : e.stopPropagation();
@@ -36,30 +36,30 @@ for(let i=0;i<onclk.length;i++){
         onclk.forEach(ele => {
             ele.classList.remove("li2clk")
         })
-        if(currli === i){
+        if (currli === i) {
             npath(i)
             onclk[i].classList.add("li2clk")
             getPageName(i)
-        }else{
+        } else {
             onclk[i].classList.add("li2clk")
-            currli=i
+            currli = i
             getPageName(i)
             npath(i)
         }
-        
+
     }
 }
 // 初始化当前页面路径
 npath(currli)
 // 页面路径
-function npath(i){
-    switch(i){
+function npath (i) {
+    switch (i) {
         case 0:
         case 1:
         case 2:
         case 3:
         case 4:
-        case 5:  
+        case 5:
             getNav2(i)
             return
         case 6:
@@ -88,16 +88,16 @@ function npath(i){
 }
 
 //处于二级导航
-function getNav2(i){
+function getNav2 (i) {
     getNav1(i)
-    document.querySelector(".csp").innerHTML="&#xeb8b;"
-    document.querySelector(".cnav2").innerHTML=onclk[i].querySelector(".navname").innerHTML
+    document.querySelector(".csp").innerHTML = "&#xeb8b;"
+    document.querySelector(".cnav2").innerHTML = onclk[i].querySelector(".navname").innerHTML
 }
-function getNav1(i){
-    var cnavicon=document.querySelector(".cnavicon")
-    var cnav1=document.querySelector(".cnav1")
-    var navname=onclk[i].querySelector(".navname")
-    switch(i){
+function getNav1 (i) {
+    var cnavicon = document.querySelector(".cnavicon")
+    var cnav1 = document.querySelector(".cnav1")
+    var navname = onclk[i].querySelector(".navname")
+    switch (i) {
         case 0:
         case 1:
         case 2:
@@ -108,68 +108,68 @@ function getNav1(i){
             getnav1name(i)
             return
         case 6:
-            cnavicon.innerHTML= nav1icon[1]
-            cnav1.innerHTML= navname.innerHTML
+            cnavicon.innerHTML = nav1icon[1]
+            cnav1.innerHTML = navname.innerHTML
             return
         case 7:
         case 8:
         case 9:
-            cnavicon.innerHTML= nav1icon[2]
+            cnavicon.innerHTML = nav1icon[2]
             getnav1name(i)
             return
         case 10:
         case 11:
-            cnavicon.innerHTML= nav1icon[3]
+            cnavicon.innerHTML = nav1icon[3]
             getnav1name(i)
             return
         case 12:
-            cnavicon.innerHTML= nav1icon[4]
-            cnav1.innerHTML= navname.innerHTML
+            cnavicon.innerHTML = nav1icon[4]
+            cnav1.innerHTML = navname.innerHTML
             return
         case 13:
         case 14:
         case 15:
         case 16:
-            cnavicon.innerHTML= nav1icon[5]
+            cnavicon.innerHTML = nav1icon[5]
             getnav1name(i)
             return
         case 17:
-            cnavicon.innerHTML= nav1icon[6]
-            cnav1.innerHTML= navname.innerHTML
+            cnavicon.innerHTML = nav1icon[6]
+            cnav1.innerHTML = navname.innerHTML
             return
     }
 }
-function getnav1name(i){
-    var a=onclk[i].parentElement.parentElement
-    var b=a.querySelectorAll(".navname")[0]
-    document.querySelector(".cnav1").innerHTML= b.innerHTML
+function getnav1name (i) {
+    var a = onclk[i].parentElement.parentElement
+    var b = a.querySelectorAll(".navname")[0]
+    document.querySelector(".cnav1").innerHTML = b.innerHTML
 }
 // 清除header历史路径
-function clearPath(){
-    document.querySelector(".cnavicon").innerHTML=null
-    document.querySelector(".cnav1").innerHTML=null
-    document.querySelector(".csp").innerHTML=null
-    document.querySelector(".cnav2").innerHTML=null
+function clearPath () {
+    document.querySelector(".cnavicon").innerHTML = null
+    document.querySelector(".cnav1").innerHTML = null
+    document.querySelector(".csp").innerHTML = null
+    document.querySelector(".cnav2").innerHTML = null
 }
 // 切换导航时，切换加载页面
-function changePage(p){
-    if(document.querySelector(".iframeCon")){
-        var l=document.querySelector(".iframeCon")
+function changePage (p) {
+    if (document.querySelector(".iframeCon")) {
+        var l = document.querySelector(".iframeCon")
         l.remove()
     }
-    riframe=document.createElement("iframe")
-    riframe.setAttribute("class","iframeCon")
+    riframe = document.createElement("iframe")
+    riframe.setAttribute("class", "iframeCon")
     // riframe.setAttribute("src","./dSubdevice.html")
-    riframe.setAttribute("src",p)
-    riframe.setAttribute("frameborder","no")
-    riframe.setAttribute("marginwidth","0")
-    riframe.setAttribute("marginheight","0")
-    riframe.setAttribute("scrolling","no")
+    riframe.setAttribute("src", p)
+    riframe.setAttribute("frameborder", "no")
+    riframe.setAttribute("marginwidth", "0")
+    riframe.setAttribute("marginheight", "0")
+    riframe.setAttribute("scrolling", "no")
     // document.querySelector(".right_content_layout").appendChild(riframe)
     document.querySelector(".right_content").appendChild(riframe)
 }
-function getPageName(i){
-    switch(i){
+function getPageName (i) {
+    switch (i) {
         case 0:
             changePage("./gLoggerpara.html")
             loadingmask()
@@ -244,35 +244,35 @@ function getPageName(i){
             return
     }
 }
-function loadingmask(){
+function loadingmask () {
     // 当页面加载完毕后，显示内容并隐藏遮罩层
     // 创建遮罩层元素
     var overlay = document.createElement('div')
     overlay.classList.add('loading_mask')
-    overlay.innerHTML=`<div class="loader"></div>`
+    overlay.innerHTML = `<div class="loader"></div>`
     document.querySelector('.right_content').appendChild(overlay)
-    riframe.addEventListener('load', function() {
+    riframe.addEventListener('load', function () {
         // 移除遮罩层以及其内部的 loader 元素
         var mask = document.querySelector('.loading_mask')
         if (mask) {
             mask.parentNode.removeChild(mask) // 移除遮罩层及其内部元素
         }
-    }) 
+    })
 }
 
 // 当页面加载完毕后，显示内容并隐藏遮罩层
 // 创建遮罩层元素
 var overlay = document.createElement('div')
 overlay.classList.add('loading_mask')
-overlay.innerHTML=`<div class="loader"></div>`
+overlay.innerHTML = `<div class="loader"></div>`
 document.querySelector('.right_content').appendChild(overlay);
-riframe.addEventListener('load', function() {
+riframe.addEventListener('load', function () {
     // 移除遮罩层以及其内部的 loader 元素
     var mask = document.querySelector('.loading_mask');
     if (mask) {
         mask.parentNode.removeChild(mask); // 移除遮罩层及其内部元素
     }
-}) 
+})
 
 // 禁止回退
 history.pushState(null, null, location.href)
@@ -288,14 +288,14 @@ window.onpopstate = function () {
 //     })
 // })()
 
-exitbutt.addEventListener('click',function(){
+exitbutt.addEventListener('click', function () {
 
 })
 
 // 删除设备窗体
-function Formexitweb(){
-    var w=document.createElement('div')
-    w.innerHTML=`<style>/*exit web page */
+function Formexitweb () {
+    var w = document.createElement('div')
+    w.innerHTML = `<style>/*exit web page */
     .deletebackground{
         position: fixed;
         height: 100%;
@@ -369,11 +369,11 @@ function Formexitweb(){
         </div>
     </div>
     `
-    w.setAttribute('class','editbackground')
-    this.setForm = function(){
+    w.setAttribute('class', 'editbackground')
+    this.setForm = function () {
         e.appendChild(w)
-    }   
-    this.getEl = function(){
+    }
+    this.getEl = function () {
         return w
     }
 }

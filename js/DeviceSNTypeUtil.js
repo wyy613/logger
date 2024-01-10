@@ -1,409 +1,409 @@
 export class DeviceSNTypeUtil {
-    constructor() {}
-    type01_1_ODM=new DeviceType('ODM','O-1P-1.5K','单相单路1-3k并网逆变器',[
-      '01',
-      '1',
-      '0',
-      '0'
-    ]);
-    type01_3_ODM=new DeviceType('ODM','O-1P-2.5K','单相单路1-3k并网逆变器',[
-      '01',
-      '3',
-      '0',
-      '0'
-    ]);
-    type01_5_ODM=new DeviceType('ODM','O-1P-3.3K','单相单路1-3k并网逆变器',[
-      '01',
-      '5',
-      '0',
-      '0'
-    ]);
-    type02_1_ODM=new DeviceType('ODM','O-1P-3.6K','单相双路3-6k并网逆变器',[
-      '02',
-      '1',
-      '0',
-      '0'
-    ]);
-    type02_2_ODM=new DeviceType('ODM','O-1P-4.2K','单相双路3-6k并网逆变器',[
-      '02',
-      '2',
-      '0',
-      '0'
-    ]);
-    type02_4_ODM=new DeviceType('ODM','O-1P-5K','单相双路3-6k并网逆变器',[
-      '02',
-      '4',
-      '0',
-      '0'
-    ]);
-    type02_4_ODM=new DeviceType('ODM','O-1P-6K','单相双路3-6k并网逆变器',[
-      '02',
-      '5',
-      '0',
-      '0'
-    ]);
-    type03_0_ODM=new DeviceType('ODM','O-1P-7K','单相双路7-10k并网逆变器',[
-      '03',
-      '0',
-      '0',
-      '0'
-    ]);
-    type03_1_ODM=new DeviceType('ODM','O-1P-8K','单相双路7-10k并网逆变器',[
-      '03',
-      '1',
-      '0',
-      '0'
-    ]);
-    type03_2_ODM=new DeviceType('ODM','O-1P-9K','单相双路7-10k并网逆变器',[
-      '03',
-      '2',
-      '0',
-      '0'
-    ]);
-    type03_3_ODM=new DeviceType('ODM','O-1P-10K','单相双路7-10k并网逆变器',[
-      '03',
-      '3',
-      '0',
-      '0'
-    ]);
-    type12_0_ODM=new DeviceType('ODM','O-3P-4K','三相双路4-25k并网逆变器',[
-      '12',
-      '0',
-      '0',
-      '0'
-    ]);
-    type12_1_ODM=new DeviceType('ODM','O-3P-5K','三相双路4-25k并网逆变器',[
-      '12',
-      '1',
-      '0',
-      '0'
-    ]);
-    type12_2_ODM=new DeviceType('ODM','O-3P-6K','三相双路4-25k并网逆变器',[
-      '12',
-      '2',
-      '0',
-      '0'
-    ]);
-    type12_3_ODM=new DeviceType('ODM','O-3P-8K','三相双路4-25k并网逆变器',[
-      '12',
-      '3',
-      '0',
-      '0'
-    ]);
-    type12_4_ODM=new DeviceType('ODM','O-3P-10K','三相双路4-25k并网逆变器',[
-      '12',
-      '4',
-      '0',
-      '0'
-    ]);
-    type12_5_ODM=new DeviceType('ODM','O-3P-12K','三相三路4-25k并网逆变器',[
-      '12',
-      '5',
-      '0',
-      '0'
-    ]);
-    type12_6_ODM=new DeviceType('ODM','O-3P-15K','三相三路4-25k并网逆变器',[
-      '12',
-      '6',
-      '0',
-      '0'
-    ]);
-    type12_8_ODM=new DeviceType('ODM','O-3P-20K','三相三路4-25k并网逆变器',[
-      '12',
-      '8',
-      '0',
-      '0'
-    ]);
-    type12_9_ODM=new DeviceType('ODM','O-3P-25K','三相三路4-25k并网逆变器',[
-      '12',
-      '9',
-      '0',
-      '0'
-    ]);
-    type12_A_ODM=new DeviceType('ODM','O-3P-8K-P','三相三路4-25k并网逆变器',[
-      '12',
-      'A',
-      '0',
-      '0'
-    ]);
-    type12_B_ODM=new DeviceType('ODM','O-3P-10K-P','三相三路4-25k并网逆变器',[
-      '12',
-      'B',
-      '0',
-      '0'
-    ]);
-    type12_C_ODM=new DeviceType('ODM','O-3P-12K-P','三相三路4-25k并网逆变器',[
-      '12',
-      'C',
-      '0',
-      '0'
-    ]);
-    type12_D_ODM=new DeviceType('ODM','O-3P-15K-P','三相三路4-25k并网逆变器',[
-      '12',
-      'D',
-      '0',
-      '0'
-    ]);
-    type16_0_ODM=new DeviceType('ODM','O-3P-30K','三相四路30-60k并网逆变器',[
-      '16',
-      '0',
-      '0',
-      '0'
-    ]);
-    type16_1_ODM=new DeviceType('ODM','O-3P-36K','三相四路30-60k并网逆变器',[
-      '16',
-      '1',
-      '0',
-      '0'
-    ]);
-    type16_2_ODM=new DeviceType('ODM','O-3P-40K','三相四路30-60k并网逆变器',[
-      '16',
-      '2',
-      '0',
-      '0'
-    ]);
-    type16_3_ODM=new DeviceType('ODM','O-3P-50K','三相四路30-60k并网逆变器',[
-      '16',
-      '3',
-      '0',
-      '0'
-    ]);
-    type16_4_ODM=new DeviceType('ODM','O-3P-60K','三相四路30-60k并网逆变器',[
-      '16',
-      '4',
-      '0',
-      '0'
-    ]);
-    type16_5_ODM=new DeviceType('ODM','O-3P-40K-P','三相四路30-60k并网逆变器',[
-      '16',
-      '5',
-      '0',
-      '0'
-    ]);
-    type16_6_ODM=new DeviceType('ODM','O-3P-50K-P','三相四路30-60k并网逆变器',[
-      '16',
-      '6',
-      '0',
-      '0'
-    ]);
-    type16_7_ODM=new DeviceType('ODM','O-3P-60K-P','三相四路30-60k并网逆变器',[
-      '16',
-      '7',
-      '0',
-      '0'
-    ]);
-    type16_8_ODM=new DeviceType('ODM','O-3P-50K-HP','三相四路30-60k并网逆变器',[
-      '16',
-      '8',
-      '0',
-      '0'
-    ]);
-    type16_9_ODM=new DeviceType('ODM','O-3P-75K-HP','三相四路30-60k并网逆变器',[
-      '16',
-      '9',
-      '0',
-      '0'
-    ]);
-    type21_0_ODM=new DeviceType('ODM','O-3P-100K','三相十路100-150k并网逆变器',[
-      '21',
-      '0',
-      '0',
-      '0'
-    ]);
-    type21_1_ODM=new DeviceType('ODM','O-3P-125K','三相十路100-150k并网逆变器',[
-      '21',
-      '1',
-      '0',
-      '0'
-    ]);
-    type21_2_ODM=new DeviceType('ODM','O-3P-100K-P','三相十路100-150k并网逆变器',[
-      '21',
-      '2',
-      '0',
-      '0'
-    ]);
-    type21_3_ODM=new DeviceType('ODM','O-3P-125K-P','三相十路100-150k并网逆变器',[
-      '21',
-      '3',
-      '0',
-      '0'
-    ]);
-    type21_4_ODM=new DeviceType('ODM','O-3P-125K-HP','三相十路100-150k并网逆变器',[
-      '21',
-      '4',
-      '0',
-      '0'
-    ]);
-    type21_5_ODM=new DeviceType('ODM','O-3P-150K-HP','三相十路100-150k并网逆变器',[
-      '21',
-      '5',
-      '0',
-      '0'
-    ]);
-    type30_0_ODM=new DeviceType('ODM','H-3P-4K-25','三相双路4-20k储能逆变器',[
-      '30',
-      '0',
-      '0',
-      '0'
-    ]);
-    type30_1_ODM=new DeviceType('ODM','H-3P-5K-25','三相双路4-20k储能逆变器',[
-      '30',
-      '1',
-      '0',
-      '0'
-    ]);
-    type30_2_ODM=new DeviceType('ODM','H-3P-6K-25','三相双路4-20k储能逆变器',[
-      '30',
-      '2',
-      '0',
-      '0'
-    ]);
-    type30_3_ODM=new DeviceType('ODM','H-3P-8K-25','三相双路4-20k储能逆变器',[
-      '30',
-      '3',
-      '0',
-      '0'
-    ]);
-    type30_4_ODM=new DeviceType('ODM','H-3P-10K-25','三相双路4-20k储能逆变器',[
-      '30',
-      '4',
-      '0',
-      '0'
-    ]);
-    type30_5_ODM=new DeviceType('ODM','H-3P-12K-25','三相双路4-20k储能逆变器',[
-      '30',
-      '5',
-      '0',
-      '0'
-    ]);
-    type30_6_ODM=new DeviceType('ODM','H-3P-10K-40','三相双路4-20k储能逆变器',[
-      '30',
-      '6',
-      '0',
-      '0'
-    ]);
-    type30_7_ODM=new DeviceType('ODM','H-3P-12K-40','三相双路4-20k储能逆变器',[
-      '30',
-      '7',
-      '0',
-      '0'
-    ]);
-    type30_8_ODM=new DeviceType('ODM','H-3P-15K-40','三相双路4-20k储能逆变器',[
-      '30',
-      '8',
-      '0',
-      '0'
-    ]);
-    type30_9_ODM=new DeviceType('ODM','H-3P-20K-40','三相双路4-20k储能逆变器',[
-      '30',
-      '9',
-      '0',
-      '0'
-    ]);
-    type31_0_ODM=new DeviceType('ODM','N/A','单相双路4.2-8k储能逆变器',[
-      '31',
-      '0',
-      '0',
-      '0'
-    ]);
-    type31_1_ODM=new DeviceType('ODM','N/A','单相双路4.2-8k储能逆变器',[
-      '31',
-      '1',
-      '0',
-      '0'
-    ]);
-    type31_2_ODM=new DeviceType('ODM','H-1P-4.2K-30','单相双路4.2-8k储能逆变器',[
-      '31',
-      '2',
-      '0',
-      '0'
-    ]);
-    type31_3_ODM=new DeviceType('ODM','N/A','单相双路4.2-8k储能逆变器',[
-      '31',
-      '3',
-      '0',
-      '0'
-    ]);
-    type31_4_ODM=new DeviceType('ODM','H-1P-5K-30','单相双路4.2-8k储能逆变器',[
-      '31',
-      '4',
-      '0',
-      '0'
-    ]);
-    type31_5_ODM=new DeviceType('ODM','H-1P-6K-30','单相双路4.2-8k储能逆变器',[
-      '31',
-      '5',
-      '0',
-      '0'
-    ]);
-    type31_6_ODM=new DeviceType('ODM','H-1P-7K-30','单相双路4.2-8k储能逆变器',[
-      '31',
-      '6',
-      '0',
-      '0'
-    ]);
-    type31_7_ODM=new DeviceType('ODM','H-1P-8K-30','单相双路4.2-8k储能逆变器',[
-      '31',
-      '7',
-      '0',
-      '0'
-    ]);
-    type31_8_ODM=new DeviceType('ODM','H-1P-3K-30','单相单路3-3.6k储能逆变器',[
-      '31',
-      '8',
-      '0',
-      '0'
-    ]);
-    type31_9_ODM=new DeviceType('ODM','H-1P-3.6K-30','单相单路3-3.6k储能逆变器',[
-      '31',
-      '9',
-      '0',
-      '0'
-    ]);
-    type32_0_ODM=new DeviceType('ODM','H-3P-25K-100','三相四路25-50k储能逆变器',[
-      '32',
-      '0',
-      '0',
-      '0'
-    ]);
-    type32_1_ODM=new DeviceType('ODM','H-3P-30K-100','三相四路25-50k储能逆变器',[
-      '32',
-      '1',
-      '0',
-      '0'
-    ]);
-    type32_2_ODM=new DeviceType('ODM','H-3P-36K-100','三相四路25-50k储能逆变器',[
-      '32',
-      '2',
-      '0',
-      '0'
-    ]);
-    type32_3_ODM=new DeviceType('ODM','H-3P-40K-100','三相四路25-50k储能逆变器',[
-      '32',
-      '3',
-      '0',
-      '0'
-    ]);
-    type32_4_ODM=new DeviceType('ODM','H-3P-50K-100','三相四路25-50k储能逆变器',[
-      '32',
-      '4',
-      '0',
-      '0'
-    ]);
-    type32_5_ODM=new DeviceType('ODM','H-3P-40K-100-P','三相四路25-50k储能逆变器',[
-      '32',
-      '5',
-      '0',
-      '0'
-    ]);
-    type32_6_ODM=new DeviceType('ODM','H-3P-50K-100-P','三相四路25-50k储能逆变器',[
-      '32',
-      '6',
-      '0',
-      '0'
+    constructor() { }
+    type01_1_ODM = new DeviceType('ODM', 'O-1P-1.5K', '单相单路1-3k并网逆变器', [
+        '01',
+        '1',
+        '0',
+        '0'
+    ]);
+    type01_3_ODM = new DeviceType('ODM', 'O-1P-2.5K', '单相单路1-3k并网逆变器', [
+        '01',
+        '3',
+        '0',
+        '0'
+    ]);
+    type01_5_ODM = new DeviceType('ODM', 'O-1P-3.3K', '单相单路1-3k并网逆变器', [
+        '01',
+        '5',
+        '0',
+        '0'
+    ]);
+    type02_1_ODM = new DeviceType('ODM', 'O-1P-3.6K', '单相双路3-6k并网逆变器', [
+        '02',
+        '1',
+        '0',
+        '0'
+    ]);
+    type02_2_ODM = new DeviceType('ODM', 'O-1P-4.2K', '单相双路3-6k并网逆变器', [
+        '02',
+        '2',
+        '0',
+        '0'
+    ]);
+    type02_4_ODM = new DeviceType('ODM', 'O-1P-5K', '单相双路3-6k并网逆变器', [
+        '02',
+        '4',
+        '0',
+        '0'
+    ]);
+    type02_4_ODM = new DeviceType('ODM', 'O-1P-6K', '单相双路3-6k并网逆变器', [
+        '02',
+        '5',
+        '0',
+        '0'
+    ]);
+    type03_0_ODM = new DeviceType('ODM', 'O-1P-7K', '单相双路7-10k并网逆变器', [
+        '03',
+        '0',
+        '0',
+        '0'
+    ]);
+    type03_1_ODM = new DeviceType('ODM', 'O-1P-8K', '单相双路7-10k并网逆变器', [
+        '03',
+        '1',
+        '0',
+        '0'
+    ]);
+    type03_2_ODM = new DeviceType('ODM', 'O-1P-9K', '单相双路7-10k并网逆变器', [
+        '03',
+        '2',
+        '0',
+        '0'
+    ]);
+    type03_3_ODM = new DeviceType('ODM', 'O-1P-10K', '单相双路7-10k并网逆变器', [
+        '03',
+        '3',
+        '0',
+        '0'
+    ]);
+    type12_0_ODM = new DeviceType('ODM', 'O-3P-4K', '三相双路4-25k并网逆变器', [
+        '12',
+        '0',
+        '0',
+        '0'
+    ]);
+    type12_1_ODM = new DeviceType('ODM', 'O-3P-5K', '三相双路4-25k并网逆变器', [
+        '12',
+        '1',
+        '0',
+        '0'
+    ]);
+    type12_2_ODM = new DeviceType('ODM', 'O-3P-6K', '三相双路4-25k并网逆变器', [
+        '12',
+        '2',
+        '0',
+        '0'
+    ]);
+    type12_3_ODM = new DeviceType('ODM', 'O-3P-8K', '三相双路4-25k并网逆变器', [
+        '12',
+        '3',
+        '0',
+        '0'
+    ]);
+    type12_4_ODM = new DeviceType('ODM', 'O-3P-10K', '三相双路4-25k并网逆变器', [
+        '12',
+        '4',
+        '0',
+        '0'
+    ]);
+    type12_5_ODM = new DeviceType('ODM', 'O-3P-12K', '三相三路4-25k并网逆变器', [
+        '12',
+        '5',
+        '0',
+        '0'
+    ]);
+    type12_6_ODM = new DeviceType('ODM', 'O-3P-15K', '三相三路4-25k并网逆变器', [
+        '12',
+        '6',
+        '0',
+        '0'
+    ]);
+    type12_8_ODM = new DeviceType('ODM', 'O-3P-20K', '三相三路4-25k并网逆变器', [
+        '12',
+        '8',
+        '0',
+        '0'
+    ]);
+    type12_9_ODM = new DeviceType('ODM', 'O-3P-25K', '三相三路4-25k并网逆变器', [
+        '12',
+        '9',
+        '0',
+        '0'
+    ]);
+    type12_A_ODM = new DeviceType('ODM', 'O-3P-8K-P', '三相三路4-25k并网逆变器', [
+        '12',
+        'A',
+        '0',
+        '0'
+    ]);
+    type12_B_ODM = new DeviceType('ODM', 'O-3P-10K-P', '三相三路4-25k并网逆变器', [
+        '12',
+        'B',
+        '0',
+        '0'
+    ]);
+    type12_C_ODM = new DeviceType('ODM', 'O-3P-12K-P', '三相三路4-25k并网逆变器', [
+        '12',
+        'C',
+        '0',
+        '0'
+    ]);
+    type12_D_ODM = new DeviceType('ODM', 'O-3P-15K-P', '三相三路4-25k并网逆变器', [
+        '12',
+        'D',
+        '0',
+        '0'
+    ]);
+    type16_0_ODM = new DeviceType('ODM', 'O-3P-30K', '三相四路30-60k并网逆变器', [
+        '16',
+        '0',
+        '0',
+        '0'
+    ]);
+    type16_1_ODM = new DeviceType('ODM', 'O-3P-36K', '三相四路30-60k并网逆变器', [
+        '16',
+        '1',
+        '0',
+        '0'
+    ]);
+    type16_2_ODM = new DeviceType('ODM', 'O-3P-40K', '三相四路30-60k并网逆变器', [
+        '16',
+        '2',
+        '0',
+        '0'
+    ]);
+    type16_3_ODM = new DeviceType('ODM', 'O-3P-50K', '三相四路30-60k并网逆变器', [
+        '16',
+        '3',
+        '0',
+        '0'
+    ]);
+    type16_4_ODM = new DeviceType('ODM', 'O-3P-60K', '三相四路30-60k并网逆变器', [
+        '16',
+        '4',
+        '0',
+        '0'
+    ]);
+    type16_5_ODM = new DeviceType('ODM', 'O-3P-40K-P', '三相四路30-60k并网逆变器', [
+        '16',
+        '5',
+        '0',
+        '0'
+    ]);
+    type16_6_ODM = new DeviceType('ODM', 'O-3P-50K-P', '三相四路30-60k并网逆变器', [
+        '16',
+        '6',
+        '0',
+        '0'
+    ]);
+    type16_7_ODM = new DeviceType('ODM', 'O-3P-60K-P', '三相四路30-60k并网逆变器', [
+        '16',
+        '7',
+        '0',
+        '0'
+    ]);
+    type16_8_ODM = new DeviceType('ODM', 'O-3P-50K-HP', '三相四路30-60k并网逆变器', [
+        '16',
+        '8',
+        '0',
+        '0'
+    ]);
+    type16_9_ODM = new DeviceType('ODM', 'O-3P-75K-HP', '三相四路30-60k并网逆变器', [
+        '16',
+        '9',
+        '0',
+        '0'
+    ]);
+    type21_0_ODM = new DeviceType('ODM', 'O-3P-100K', '三相十路100-150k并网逆变器', [
+        '21',
+        '0',
+        '0',
+        '0'
+    ]);
+    type21_1_ODM = new DeviceType('ODM', 'O-3P-125K', '三相十路100-150k并网逆变器', [
+        '21',
+        '1',
+        '0',
+        '0'
+    ]);
+    type21_2_ODM = new DeviceType('ODM', 'O-3P-100K-P', '三相十路100-150k并网逆变器', [
+        '21',
+        '2',
+        '0',
+        '0'
+    ]);
+    type21_3_ODM = new DeviceType('ODM', 'O-3P-125K-P', '三相十路100-150k并网逆变器', [
+        '21',
+        '3',
+        '0',
+        '0'
+    ]);
+    type21_4_ODM = new DeviceType('ODM', 'O-3P-125K-HP', '三相十路100-150k并网逆变器', [
+        '21',
+        '4',
+        '0',
+        '0'
+    ]);
+    type21_5_ODM = new DeviceType('ODM', 'O-3P-150K-HP', '三相十路100-150k并网逆变器', [
+        '21',
+        '5',
+        '0',
+        '0'
+    ]);
+    type30_0_ODM = new DeviceType('ODM', 'H-3P-4K-25', '三相双路4-20k储能逆变器', [
+        '30',
+        '0',
+        '0',
+        '0'
+    ]);
+    type30_1_ODM = new DeviceType('ODM', 'H-3P-5K-25', '三相双路4-20k储能逆变器', [
+        '30',
+        '1',
+        '0',
+        '0'
+    ]);
+    type30_2_ODM = new DeviceType('ODM', 'H-3P-6K-25', '三相双路4-20k储能逆变器', [
+        '30',
+        '2',
+        '0',
+        '0'
+    ]);
+    type30_3_ODM = new DeviceType('ODM', 'H-3P-8K-25', '三相双路4-20k储能逆变器', [
+        '30',
+        '3',
+        '0',
+        '0'
+    ]);
+    type30_4_ODM = new DeviceType('ODM', 'H-3P-10K-25', '三相双路4-20k储能逆变器', [
+        '30',
+        '4',
+        '0',
+        '0'
+    ]);
+    type30_5_ODM = new DeviceType('ODM', 'H-3P-12K-25', '三相双路4-20k储能逆变器', [
+        '30',
+        '5',
+        '0',
+        '0'
+    ]);
+    type30_6_ODM = new DeviceType('ODM', 'H-3P-10K-40', '三相双路4-20k储能逆变器', [
+        '30',
+        '6',
+        '0',
+        '0'
+    ]);
+    type30_7_ODM = new DeviceType('ODM', 'H-3P-12K-40', '三相双路4-20k储能逆变器', [
+        '30',
+        '7',
+        '0',
+        '0'
+    ]);
+    type30_8_ODM = new DeviceType('ODM', 'H-3P-15K-40', '三相双路4-20k储能逆变器', [
+        '30',
+        '8',
+        '0',
+        '0'
+    ]);
+    type30_9_ODM = new DeviceType('ODM', 'H-3P-20K-40', '三相双路4-20k储能逆变器', [
+        '30',
+        '9',
+        '0',
+        '0'
+    ]);
+    type31_0_ODM = new DeviceType('ODM', 'N/A', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '0',
+        '0',
+        '0'
+    ]);
+    type31_1_ODM = new DeviceType('ODM', 'N/A', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '1',
+        '0',
+        '0'
+    ]);
+    type31_2_ODM = new DeviceType('ODM', 'H-1P-4.2K-30', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '2',
+        '0',
+        '0'
+    ]);
+    type31_3_ODM = new DeviceType('ODM', 'N/A', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '3',
+        '0',
+        '0'
+    ]);
+    type31_4_ODM = new DeviceType('ODM', 'H-1P-5K-30', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '4',
+        '0',
+        '0'
+    ]);
+    type31_5_ODM = new DeviceType('ODM', 'H-1P-6K-30', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '5',
+        '0',
+        '0'
+    ]);
+    type31_6_ODM = new DeviceType('ODM', 'H-1P-7K-30', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '6',
+        '0',
+        '0'
+    ]);
+    type31_7_ODM = new DeviceType('ODM', 'H-1P-8K-30', '单相双路4.2-8k储能逆变器', [
+        '31',
+        '7',
+        '0',
+        '0'
+    ]);
+    type31_8_ODM = new DeviceType('ODM', 'H-1P-3K-30', '单相单路3-3.6k储能逆变器', [
+        '31',
+        '8',
+        '0',
+        '0'
+    ]);
+    type31_9_ODM = new DeviceType('ODM', 'H-1P-3.6K-30', '单相单路3-3.6k储能逆变器', [
+        '31',
+        '9',
+        '0',
+        '0'
+    ]);
+    type32_0_ODM = new DeviceType('ODM', 'H-3P-25K-100', '三相四路25-50k储能逆变器', [
+        '32',
+        '0',
+        '0',
+        '0'
+    ]);
+    type32_1_ODM = new DeviceType('ODM', 'H-3P-30K-100', '三相四路25-50k储能逆变器', [
+        '32',
+        '1',
+        '0',
+        '0'
+    ]);
+    type32_2_ODM = new DeviceType('ODM', 'H-3P-36K-100', '三相四路25-50k储能逆变器', [
+        '32',
+        '2',
+        '0',
+        '0'
+    ]);
+    type32_3_ODM = new DeviceType('ODM', 'H-3P-40K-100', '三相四路25-50k储能逆变器', [
+        '32',
+        '3',
+        '0',
+        '0'
+    ]);
+    type32_4_ODM = new DeviceType('ODM', 'H-3P-50K-100', '三相四路25-50k储能逆变器', [
+        '32',
+        '4',
+        '0',
+        '0'
+    ]);
+    type32_5_ODM = new DeviceType('ODM', 'H-3P-40K-100-P', '三相四路25-50k储能逆变器', [
+        '32',
+        '5',
+        '0',
+        '0'
+    ]);
+    type32_6_ODM = new DeviceType('ODM', 'H-3P-50K-100-P', '三相四路25-50k储能逆变器', [
+        '32',
+        '6',
+        '0',
+        '0'
     ]);
     //暂不录入AC耦合逆变器
-   
+
     type1 = new DeviceType('Solinteg', 'OGS-1.5K', '单相单路1-3k并网逆变器', [
         '01',
         '1',
@@ -939,58 +939,58 @@ export class DeviceSNTypeUtil {
         '0'
     ]);
     type31_0_1 = new DeviceType(
-      'Solinteg',
-      'N/A',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '0', 'A', '0']
+        'Solinteg',
+        'N/A',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '0', 'A', '0']
     )
     type31_1_1 = new DeviceType(
-      'Solinteg',
-      'N/A',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '1', 'A', '0']
+        'Solinteg',
+        'N/A',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '1', 'A', '0']
     )
     type31_2_1 = new DeviceType(
-      'Solinteg',
-      'MHS-4.2K-30',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '2', 'A', '0']
+        'Solinteg',
+        'MHS-4.2K-30',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '2', 'A', '0']
     )
     type31_3_1 = new DeviceType(
-      'Solinteg',
-      'N/A',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '3', 'A', '0']
+        'Solinteg',
+        'N/A',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '3', 'A', '0']
     )
     type31_4_1 = new DeviceType(
-      'Solinteg',
-      'MHS-5K-30',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '4', 'A', '0']
+        'Solinteg',
+        'MHS-5K-30',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '4', 'A', '0']
     )
     type31_5_1 = new DeviceType(
-      'Solinteg',
-      'MHS-6K-30',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '5', 'A', '0']
+        'Solinteg',
+        'MHS-6K-30',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '5', 'A', '0']
     )
     type31_6_1 = new DeviceType(
-      'Solinteg',
-      'MHS-7K-30',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '6', 'A', '0']
+        'Solinteg',
+        'MHS-7K-30',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '6', 'A', '0']
     )
     type31_7_1 = new DeviceType(
-      'Solinteg',
-      'MHS-8K-30',
-      '单相双路4.2-8k储能逆变器',
-      ['31', '7', 'A', '0']
+        'Solinteg',
+        'MHS-8K-30',
+        '单相双路4.2-8k储能逆变器',
+        ['31', '7', 'A', '0']
     )
-  
+
     //type31_0_2("Solinteg","N/A","单相双路4.2-8k 储能逆变器",["30","0","A",""]);
     //type31_1_2("Solinteg","N/A","单相双路4.2-8k 储能逆变器",["30","1","A",""]);
 
-    getElement(deviceType, standard, brand, brandDetail) {
+    getElement (deviceType, standard, brand, brandDetail) {
         // console.log('params:', deviceType, standard, brand, brandDetail);
         // let keys = Object.keys(this)
         const currentItem = Object.keys(this).find(
@@ -1016,7 +1016,7 @@ export class DeviceSNTypeUtil {
                     subBrand: '--',
                     type: this[item].type,
                     parentBrand: this[item].subBrand,
-                    subBrand:this[item].subBrand
+                    subBrand: this[item].subBrand
                 };
             }
             return curItem;
@@ -1032,10 +1032,10 @@ export class DeviceSNTypeUtil {
 }
 
 class DeviceType {
-    brand= "";
-    subBrand="";
-    type= '';
-    bitVals= [];
+    brand = "";
+    subBrand = "";
+    type = '';
+    bitVals = [];
 
     constructor(brand, subBrand, type, bitVals) {
         this.brand = brand;

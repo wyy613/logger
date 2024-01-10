@@ -5,6 +5,10 @@
        url('./font_icon/iconfont.woff?t=1697682915143') format('woff'),
        url('./font_icon/iconfont.ttf?t=1697682915143') format('truetype');
 }
+
+* {
+    box-sizing: border-box;
+}
 .iconfont {
     font-family: "iconfont" !important;
     font-size: 16px;

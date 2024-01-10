@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script>
         // 检查用户的登录状态
-        function isUserLoggedIn() {
+        function isUserLoggedIn () {
             // 从 sessionStorage 中检查登录状态
             const isLoggedIn = sessionStorage.getItem('isLoggedIn')
             // 如果已登录，返回 true；否则，返回 false
@@ -27,6 +28,7 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
+
 <body class="hbody">
     <div class="indexContent">
         <div class="indexContent_sider">
@@ -169,7 +171,7 @@
                 <div class="headerRight header">
                     <span class="exit iconfont">&#xe60d;</span>
                 </div>
-                
+
             </div>
             <!-- 加载遮罩层 -->
             <!-- <div class="loading_mask"><div class="loader"></div></div> -->
@@ -179,4 +181,5 @@
 
     <script type="module" src="../js/home.js"></script>
 </body>
+
 </html>
