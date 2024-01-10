@@ -289,7 +289,7 @@ window.onpopstate = function () {
 // })()
 
 exitbutt.addEventListener('click', function () {
-
+    window.location.href = 'login.html'
 })
 
 // 删除设备窗体

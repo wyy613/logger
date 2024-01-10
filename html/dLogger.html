@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='UTF-8'>
     <title>Device - Logger set </title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/guide.css">
+    <link rel="stylesheet" href="../css/dLogger.css">
 </head>
+
 <body>
     <div class="pcontent">
-        <span>设备-采集器，待开发</span>
+        <div class="card">
+            <div class="title">并网逆变器台数</div>
+            <zy-input class="invOnline" titlename="" placeholder="[1, 120]" prompt='' inunit="台"
+                regex="^(0{0,2}[1-9]\d?|1[01]\d|120)$" disabled="enable"></zy-input>
+        </div>
+        <div class="card">
+            <div class="title">储能逆变器台数</div>
+            <zy-input class="invOnline" titlename="" placeholder="[1, 120]" prompt='' inunit="台"
+                regex="^(0{0,2}[1-9]\d?|1[01]\d|120)$" disabled="enable"></zy-input>
+        </div>
+        <div class="card">
+            <div class="title title-error">是否是能12V输出</div>
+            <zy-dropdown class="enable12V1Apowersupply" placeholder="请选择" titlename="">
+                <option value="否">否</option>
+                <option value="是">是</option>
+            </zy-dropdown>
+        </div>
+        <div class="card">
+            <div class="reset">
+                <div class="reset-head">
+                    <span class="reset-title">恢复出厂设置</span>
+                    <span class="reset-btn btn">执行</span>
+                </div>
+                <div class="reset-desc">Once “Start” button is tapped, the inverter will come back to run normally from
+                    ”waiting” status under the premise that wire connections are proper and well.</div>
+            </div>
+        </div>
+        <div class="setting-box">
+            <span class="setting-btn btn">设置</span>
+        </div>
+        <div>
+            
+        </div>
     </div>
-    
+    <script type="module" src="../js/zyElement.js"></script>
 </body>
+
 </html>

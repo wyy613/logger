@@ -1,5 +1,5 @@
-.pcontent{
-    padding: 10px 25px;
+.pcontent {
+    padding: 10px 16px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -8,74 +8,92 @@
     position: relative;
     height: 100%;
 }
-.g_guide{
-    width: 100%;height: auto;box-sizing: border-box;
+
+.g_guide {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
     padding: 10px 50px;
     max-height: 640px;
 }
-.gparawrap{
+
+.gparawrap {
     width: 100%;
-    padding: 10px 0;box-sizing: border-box;
+    padding: 10px 0;
+    box-sizing: border-box;
     height: auto;
     background-color: var(--white1);
     padding: 10px 6px;
     display: flex;
     flex-wrap: wrap;
 }
-.gparalist{
+
+.gparalist {
     width: 100%;
-    padding: 10px 0;box-sizing: border-box;
+    padding: 12px 18px;
+    box-sizing: border-box;
     height: auto;
     background-color: var(--white1);
     padding: 10px 6px;
     display: flex;
     flex-direction: column;
 }
-zy-input,zy-dropdown{
+
+zy-input,
+zy-dropdown {
     margin: 15px 20px;
 }
+
 /* zy-input{
     vertical-align: baseline;
 } */
-.footset{
+.footset {
     width: 100%;
-    display: flex;flex-direction: row;justify-content: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
     padding: 15px 0;
 }
-.footset span{
+
+.footset span {
     width: auto;
-    height: 26px;line-height: 26px;
+    height: 26px;
+    line-height: 26px;
     font-size: 12px;
     border-radius: 2px;
     border: 1px solid #e8e8e8;
     box-sizing: border-box;
     padding: 0 17px;
 }
-.set_butt{
+
+.set_butt {
     color: var(--white1);
     cursor: not-allowed;
     background-color: #d8d8d8;
     /* cursor: pointer;
     background-color: #676cc4; */
 }
-.getTime,.nextpage,.refresh,.prepage{
-    background-color:transparent;
+
+.getTime,
+.nextpage,
+.refresh,
+.prepage {
+    background-color: transparent;
     color: #707e92;
     cursor: pointer;
-    margin-right:8px ;
+    margin-right: 8px;
     /* vertical-align: baseline; */
 }
-.gparalist{
-    padding: 12px 18px;
-}
-.device_form_th{
+
+.device_form_th {
     width: 99.9%;
     display: flex;
     flex-direction: row;
     justify-content: start;
     height: 36px;
 }
-.device_form_thtd{
+
+.device_form_thtd {
     background-color: #F5F6F9;
     border-bottom: #E9EDF6;
     border-style: 2px;
@@ -87,43 +105,54 @@ zy-input,zy-dropdown{
     box-sizing: border-box;
     justify-content: start;
 }
-.device_form_th_paraname{
-    font-size: 12px ;
+
+.device_form_th_paraname {
+    font-size: 12px;
     color: #111;
     width: 100%;
     display: flex;
-    
+
 }
-.selectallicon{
+
+.selectallicon {
     margin-right: 5px;
     cursor: pointer;
 }
-.device_form_thtd:first-child .device_form_th_paraname{
+
+.device_form_thtd:first-child .device_form_th_paraname {
     justify-content: center;
 }
-.firstcol{
+
+.firstcol {
     width: 10%;
     border-radius: 3px 0 0 0px;
     text-align: center;
 }
-.secondcol,.thirdcol,.fourcol{
+
+.secondcol,
+.thirdcol,
+.fourcol {
     width: 22%;
 }
-.fivecol{
+
+.fivecol {
     width: 14%;
 }
-.sixcol{
+
+.sixcol {
     width: 10%;
 }
+
 /* 表单滚动条 */
-.device_table_control{
+.device_table_control {
     width: 100%;
     max-height: 416px;
     overflow-y: scroll;
     position: relative;
 }
+
 /*  */
-.gdeviceconn{
+.gdeviceconn {
     font-size: 12px;
     font-weight: 400;
     color: #111;
@@ -133,18 +162,20 @@ zy-input,zy-dropdown{
     flex-direction: column;
     justify-content: start;
 }
-.device_list_tr{
+
+.device_list_tr {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: start;
     height: 36px;
 }
+
 /* 整行的悬停变色 */
 /* .device_list_tr:hover{
     background-color: #ccbbbb;
 } */
-.device_list_trtd{
+.device_list_trtd {
     background-color: #fff;
     border-bottom: 1px solid #dbdcdd;
     display: flex;
@@ -154,151 +185,260 @@ zy-input,zy-dropdown{
     align-self: stretch;
     box-sizing: border-box;
 }
-.device_firstcol{
+
+.device_firstcol {
     width: 10%;
     text-align: center;
-    display: flex;justify-content: center;
+    display: flex;
+    justify-content: center;
 }
-.device_secondcol,.device_thirdcol,.device_fourcol{
+
+.device_secondcol,
+.device_thirdcol,
+.device_fourcol {
     width: 22%;
 }
-.device_fivecol{
+
+.device_fivecol {
     width: 14%;
 }
-.device_sixcol{
+
+.device_sixcol {
     width: 10%;
-    
+
 }
-.device_sixcol .tdvalue{
-    justify-content:start;
+
+.device_sixcol .tdvalue {
+    justify-content: start;
 }
-.device_sixcol .tdvalue i{
+
+.device_sixcol .tdvalue i {
     cursor: pointer;
 }
-.device_sixcol .tdvalue i:first-child{
+
+.device_sixcol .tdvalue i:first-child {
     margin-right: 6px;
 }
-.device_nodata{
+
+.device_nodata {
     font-size: 12px;
     font-weight: 400;
 }
-.tdvalue,.device_form_th_paraname{
-    font-size: 12px ;
+
+.tdvalue,
+.device_form_th_paraname {
+    font-size: 12px;
     color: #111;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-.device_scrollw{
+
+.device_scrollw {
     background-color: #F5F6F9;
     border-bottom: #E9EDF6;
     width: 6px;
     border-radius: 0 3px 0 0;
 }
+
 /* 表单动态dom */
 /* 表单foot */
-.device_form_foot{
+.device_form_foot {
     display: flex;
     flex-direction: row;
     justify-content: end;
     margin-top: 12px;
 }
+
 /* 右上角按钮 */
-.device_operation_button{
+.device_operation_button {
     box-sizing: border-box;
-    width: auto;height: 30px;padding: 6px 16px;
+    width: auto;
+    height: 30px;
+    padding: 6px 16px;
     border-radius: 2px;
     font-size: 12px;
     line-height: 18px;
     text-align: center;
 }
-.formfunc{
-    height: 30px;
+
+.formfunc {
+    height: 50px;
     line-height: 30px;
     padding: 6px 0;
-    display: flex;flex-direction: row;
+    display: flex;
+    flex-direction: row;
     justify-content: end;
 }
-.deletedevice,.querydevice{
+
+.deletedevice,
+.querydevice {
     cursor: pointer;
 }
-.querydevice{
+
+.querydevice {
     background-color: #676cc4;
     color: #fff;
 }
-.manualadd{
+
+.manualadd {
     background-color: #E1E2F3;
     color: #707e92;
     margin-right: 9px;
 }
-.deletedevice{
+
+.deletedevice {
     background-color: transparent;
     color: #707e92;
     margin-right: 9px;
     border: 1px solid #e8e8e8;
     border-radius: 2px;
 }
+
 /* 按钮 */
 /* 弹窗提示 */
-.msg{position:fixed;height:100%;width:100%;left:0;top:0;background:rgba(0,0,0,.1);z-index:10}
-.msg.hide{display:none}
-.msg .content,.msg .content-time{position:absolute;top:1%;left:50%;padding:8px 15px;
-    /* background: #fff; */
-    color:#111;width:80%;max-width:200px;text-align:center;font-size:12px;
-    border-radius:3px;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);
-    -moz-transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%)
+.msg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, .1);
+    z-index: 10
 }
 
-.spinner{margin:-10px -40px;width:70px;text-align:center;position:absolute;left:50%;}
-.spinner>div{width:16px;height:16px;background-color:#fff;border-radius:100%;display:inline-block;margin:0 2px;-webkit-animation:sk-bouncedelay 1.4s infinite ease-in-out both;animation:sk-bouncedelay 1.4s infinite ease-in-out both}
-.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}
-.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}
-@-webkit-keyframes sk-bouncedelay{
-    0%,100%,80%{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}
+.msg.hide {
+    display: none
 }
-@keyframes sk-bouncedelay{0%,100%,80%{-webkit-transform:scale(0);transform:scale(0)}40%{-webkit-transform:scale(1);transform:scale(1)}}
+
+.msg .content,
+.msg .content-time {
+    position: absolute;
+    top: 1%;
+    left: 50%;
+    padding: 8px 15px;
+    /* background: #fff; */
+    color: #111;
+    width: 80%;
+    max-width: 200px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%)
+}
+
+.spinner {
+    margin: -10px -40px;
+    width: 70px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+}
+
+.spinner>div {
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 2px;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -.32s;
+    animation-delay: -.32s
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -.16s;
+    animation-delay: -.16s
+}
+
+@-webkit-keyframes sk-bouncedelay {
+
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes sk-bouncedelay {
+
+    0%,
+    100%,
+    80% {
+        -webkit-transform: scale(0);
+        transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
 /* 弹窗提示 */
 
 
 /* 电表设置页 */
-.nometerport{
+.nometerport {
     width: 100%;
     height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.notemeter,.elsenote{
+
+.notemeter,
+.elsenote {
     width: 100%;
     height: auto;
     font-size: 12px;
-    color:#707e92;
+    color: #707e92;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.goinvset{
+
+.goinvset {
     text-decoration: underline;
     color: #676cc4;
     cursor: pointer;
     margin: 0 2px;
 }
+
 /*submit result*/
-.result,.description{
+.result,
+.description {
     vertical-align: middle;
 }
-.succContent{
+
+.succContent {
     background-color: #F0F7F0;
 }
-.succContent .result,.succContent .description{
+
+.succContent .result,
+.succContent .description {
     color: #61AC62;
 }
-.failedContent{
+
+.failedContent {
     background-color: #FCEEEE;
 }
-.failedContent .result,.failedContent .description{
+
+.failedContent .result,
+.failedContent .description {
     color: #DA4E51;
 }
-
-

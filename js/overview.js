@@ -6,7 +6,7 @@ const clientH = html.clientHeight;
 console.log(clientH)
 const realtimeinfo = document.querySelector('.realtimeinfo');
 // pcontent的高度减去basicinfo高度及padding高度
-realtimeinfo.style.height = clientH - 123 + 'px'
+realtimeinfo.style.height = clientH - 125 + 'px'
 // 获取设备参数
 function getDeviceParams () {
     Ajax.get(`/logger_overview`, function (res) {
